@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/base.css">
+        <script src="scripts/gatdates.js" defer></script>
+    </head>
+    <body>
+        <header>
+
+            <h1>Header Content</h1>
+            <nav>
+                <ul class="navigation-bar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                
+            </nav>
+
+        </header>
+
+        <main>
+            <h1>Main Content</h1>
+            <span class="aside-content">Aside Content</span>
+
+        </main>
+
+        <footer>
+            <h1>Footer Content</h1>
+        </footer>
+        
+    </body>
+    </html>

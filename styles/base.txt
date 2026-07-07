@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #2b2e31;
+    --secondary-color: black;
+    --terciary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    }
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / 300px 1fr auto;
+    margin: 0;
+    }
+
+header {
+    display: grid;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    grid-column: 1 / 4;
+    text-align: left;
+    margin: 0;
+    align-items: center;
+    
+}
+
+header h1 {
+    padding-left: 1rem;
+}
+
+
+nav {
+    width: 100%;
+	margin: 0;
+    padding: 0;
+    align-items: center;
+
+}
+
+.navigation-bar {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--secondary-color);
+	align-items: center;
+    padding: 0.7rem 0;
+    margin: 0;
+    width: 100%;
+
+}
+
+.navigation-bar li {
+	flex: 1 1 auto;
+}
+
+.navigation-bar a {
+	font-weight: 700;
+	display: block;
+	color: #eee;
+    margin: 0;
+	text-decoration: none;
+	text-align: center;
+}
+
+.navigation-bar a:hover {
+	text-decoration: underline;
+	text-decoration-color: yellow;
+}
+
+main {
+    text-align: left;
+    margin:0;
+    display: grid;
+    background-color: var(--terciary-color);
+    grid-column: 1 / 4;
+    padding: 0;
+    text-align: left;
+    padding-left: 1rem;
+
+}
+
+.aside-content {
+  background: var(--light-color);
+  grid-column: 3 / 4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+footer {
+    display: grid;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    grid-column: 1 / 4;
+    padding: 1rem;
+    text-align: center;
+    height: 5rem;
+}
