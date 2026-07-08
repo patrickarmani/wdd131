@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Patrick Marcelo Araújo Silva Armani" />
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Patrick Marcelo Araújo Silva Armani - Work completed for the WDD131 course." />
+    <meta name="author" content="Patrick Marcelo Araújo Silva Armani">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Patrick Marcelo Araújo Silva Armani - Work completed for the WDD131 course.">
     <title>WDD 131 – Dynamic Web Fundamentals – Patrick Armani</title>
     
     <!-- link for Google Fonts -->
@@ -23,39 +23,43 @@
 
 <body>
     <header>
-        <span id="course-title">
-            <h1>WDD 131: Dynamic Web Fundamentals</h1>
-        </span>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+            <!-- <h1>WDD 131: Dynamic Web Fundamentals</h1> -->
+        
         <nav>
             <ul class="navigation-bar">
                 <li><a href="https://www.linkedin.com/in/patrickarmani/">LinkedIn</a></li>
                 <li><a href="https://byupw.instructure.com/">I-Learn</a></li>
                 <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
                 <li><a href="#">Final Projects</a></li>
+            </ul>
 
         </nav>
 
     </header>
 
     <main>
-        <h1>Patrick Marcelo A. S. Armani</h1>
+        <!-- <section id="name"> -->
+            <h1>Patrick Marcelo A. S. Armani</h1>
+        <!-- </section> -->
         <!-- <span class="aside-content">Aside Content</span> -->
          <section class="card">
             <h2>About Me</h2>
-            <div class="myphoto">
-                <img src="images/PatrickArmani.jpeg" alt="Patrick Armani" width="200" height="200">
+            <div class="photo">
+                <div class="myphoto">
+                    <img src="images/PatrickArmani.jpeg" alt="Patrick Armani" width="200" height="200">
+                </div>
+                    <p> My name is Patrick Armani. I was born in Brazil and I live in Belo Horizonte, State of Minas Gerais.
+                        I am currently studing at Brigham Young University-Idaho. I am pursuing a degree in Software Development.
+                        I feel that I can hepl people by using my skills to create useful and engaging web experiences.</p>
             </div>
-            <p> My name is Patrick Armani. I was born in Brazil and I live in Belo Horizonte, State of Minas Gerais.
-                I am currently studing at Brigham Young University-Idaho. I am pursuing a degree in Software Development.
-                I feel that I can hepl people by using my skills to create useful and engaging web experiences.</p>
+ 
             <h3>Federative Republic of Brazil</h3>
             <div class="country">
-                <div class="flag">
-                    <img src="images/BrasilFlag.webp" alt="Brazil Flag">    
+                <figure class="flag">
+                    <img src="images/BrasilFlag.webp" alt="Brazil Flag">
                     <figcaption>Official Flag of Brazil</figcaption>
-                
-
-                </div>
+                </figure>
                 <p> Brazil is the largest country in South America and the Latin American region, and the fifth-largest in the world by land
                     area. It is the largest country in South America and Latin America, and the fifth-largest in the world by land area.
                     Its official language is Portuguese, and its population reached 213 million inhabitants in 2025.</p>
@@ -75,10 +79,21 @@
             </ul>
         </section> -->
 
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <p>Here are some useful resources for web development:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+            </ul>
+        </section>
+
+
 
     </main>
 
-    <aside>
+    <!-- <aside>
         <h2>Web Dev Resources</h2>
         <hr>
         <p>Here are some useful resources for web development:</p>
@@ -87,14 +102,16 @@
             <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
             <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
         </ul>
-    </aside>    
+    </aside>     -->
 
     <footer>
-        <span id="currentyear">
-            <p>
-                &copy; <span id="year">2026 - Patrick Marcelo A. S. Armani. Brazil</span> .
-            </p>
-        </span>
+
+        <span id="currentyear"></span> 
+        
+        <p></p>
+
+        <span id="lastModified"></span>
+
     </footer>
 
 </body>

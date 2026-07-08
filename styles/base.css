@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1b3205;
+    --primary-color: #25410a;
     --secondary-color: black;
     --terciary-color: #6c757d;
     --success-color: #030e05;
@@ -14,13 +14,13 @@
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto / 1fr 350px;
+    grid-template: auto 1fr auto / 1fr 350px;
     margin: 0;
     }
 
 header {
-    /* display: grid; */
-    background-color: var(--success-color);
+    display: block; 
+    background-color: var(--primary-color);
 
     color: var(--light-color);
     grid-column: 1 / 4;
@@ -34,7 +34,7 @@ header h1 {
     font-family: var(--primary-font);
 
 }
-/*
+
 #course-title {
     display: block;
     font-family: var(--secondary-font);
@@ -43,7 +43,7 @@ header h1 {
     text-align: center;
     margin: 0;
 }
-*/
+
 nav {
     font-family: var(--primary-font);
     width: 100%;
@@ -54,7 +54,7 @@ nav {
 }
 
 .navigation-bar {
-	list-style: none;
+	list-style-type: none;
 	display: flex;
 	flex-wrap: wrap;
 	background-color: var(--secondary-color);
@@ -79,55 +79,38 @@ nav {
 }
 
 .navigation-bar a:hover {
-	text-decoration: underline;
+    border: 2px solid rgb(157, 255, 0);
+    background-color: rgb(0, 60, 255);
+	/* text-decoration: underline; */
 	text-decoration-color: yellow;
 }
 
 main {
-   
-    margin:0;
+    /* max-width: 3/4; */
+    margin: 2rem auto;
+    margin-left: 8rem;
     display: grid;
+    justify-content: space-between;
+    grid-gap: 0.5rem 0.5rem;
+    grid-template-columns: 8fr 5fr;
     place-items: center;
-    grid-column: 1 / 3; 
+    grid-column: 1/ 3; 
     background-color: white;
     font-family: var(--primary-font);
-    padding: 10px;
-    padding-left:auto;
+    
+    /* padding-left:auto; */
     /* align-content: space-between; */
 }
 
 main h1 { 
+    grid-column: 1 / 4;
+    text-align: center;
+
     font-family: var(--secondary-font);
     font-size: 2rem;
-    color: var(--success-color);
-    text-align: center;
+    color: var(--primary-color);
+    /* text-align: center; */
     width: 100%;
-}
-
-aside {
-    border: 1px solid var(--secondary-color);
-    border-radius: 10px;
-    display: grid;
-    grid-column: 3 / 4;
-    background-color: white;
-    color: var(--light-color);
-    font-family: var(--primary-font);
-    padding: 0.5rem;
-    text-align: center;
-    margin: 0 1rem 0 0.2rem;
-    margin-top: 6.2rem;
-    margin-bottom: 0.6rem;
-}
-
-aside h2 {
-    background-color: var(--success-color);
-    font-family: var(--secondary-font); 
-    overflow: hidden;
-    font-size: 1.5rem;
-    color: var(--light-color);
-    text-align: center;
-    margin: 0;
-    padding: 0.5rem;
 }
 .card {
     border: 1px solid var(--secondary-color);
@@ -139,11 +122,13 @@ aside h2 {
     text-align: center;
     padding: 0;
     font-size: 1.2rem;
+    aspect-ratio: 16 / 9;
+    margin-top: 0;
 
 }
 
 .card h2 {
-  background-color: var;
+  
   color: white;
   text-align: center;
   margin: 0;
@@ -152,10 +137,10 @@ aside h2 {
 }
 
 h2 {
-    background-color: var(--success-color);
+    background-color: var(--primary-color);
     height:2rem ;
     font-family: var(--secondary-font); 
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: var(--light-color);
     text-align: center;
 }
@@ -165,18 +150,28 @@ p {
     font-size: 1rem;
     color: var(--secondary-color);
     text-align: right;
-    /* padding: 0.5rem; */
-    /* margin-top: 15rem; */
 }
 
-.myphoto {
-    margin: auto;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-right: 7rem; 
-    width: 15%;
-    height: auto;
-    object-fit: right;
+h3::after {
+    content: "";
+    display: block;
+    width: 30rem;
+    height: 1px;
+    background-color: gray;
+    margin: 10px auto 0;
+}
+
+.photo {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 1rem;
+}
+
+.photo p {
+    text-align: left;
+    margin: 0;
 }
 
 .country {
@@ -200,29 +195,13 @@ p {
     height: auto;
 }
 
-/*
-.card h2 {
-    background-color: var(--success-color);
-    font-family: var(--secondary-font); 
-    font-size: 1.5rem;
-    color: var(--light-color);
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     text-align: center;
+    padding: 1rem;
 }
-/*
-.card p {
-    font-family: var(--primary-font);
-    font-size: 1rem;
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 0.5rem;
-}
-
-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    align-items: center;
-}*/
 
 footer {
     display: grid;

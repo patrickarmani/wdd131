@@ -1,8 +1,9 @@
-function date() {
-    const d = new Date();
-    const year = d.getFullYear();
-    const month = d.getMonth() + 1;
-    const day = d.getDate();
-    const dateString = `${month}/${day}/${year}`;
-    document.getElementById("date").textContent = dateString;
-}
+const currentyear = document.querySelector("#currentyear");
+
+const today = new Date();
+
+currentyear.innerHTML = `<span id="currentyear">${today.getFullYear()} - Patrick Marcelo A. S. Armani - Brazil</span>`;
+
+const modified = new Date();
+
+const lasModified = document.getElementById("lastModified").innerHTML = document.lastModified;
