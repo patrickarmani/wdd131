@@ -21,6 +21,7 @@
 
 </head>
 
+
 <body>
     <header>
         <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
