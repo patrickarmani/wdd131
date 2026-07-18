@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patrick Marcelo Araújo Silva Armani">
+    <meta name="description" content="WDD 131 – W02 Assignment: Picture Album - Patrick Marcelo Araújo Silva Armani - Task.">
+
+    <title>Temple Album</title>
+
+        <!-- link for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+    <!------------------------------------------HEADER------------------------------------------>
+    <header>
+        <div id="menu-button">
+            <h1>
+                Temple Album
+            </h1>
+
+            <button class="hamburguer-menu" aria-label="Open menu">☰</button>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        
+        </nav>
+
+    </header>
+    
+     <!------------------------------------------MAIN------------------------------------------>
+    <main>
+
+        <h2>
+            Home
+        </h2>
+        
+        <div class="gallery">
+
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/320x200/aba-nigeria-temple-lds-273999-wallpaper.jpg" alt="Aba Nigeria Temple">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/320x200/sao-paulo-brazil-temple-lds-187030-wallpaper.jpg" alt="São Paulo Brazil Temple">
+                <figcaption>São Paulo Brazil Temple</figcaption>
+            </figure>
+            
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/320x200/albuquerque-temple-lds-137883-wallpaper.jpg" alt="Albuquerque New Mexico Temple">
+                <figcaption>Albuquerque New Mexico Temple</figcaption>
+            </figure>
+
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/arequipa-peru/320x200/2-3c2316607190934fc0265f4107b5013b0cc4b21e.jpeg" alt="Arequipa Peru Temple">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/campinas-brazil/320x200/mormon-temple-campinas-brazil-1029890-wallpaper.jpg" alt="Campinas Brazil Temple">
+                <figcaption>Campinas Brazil Temple</figcaption>
+            </figure>
+
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/belem-brazil/320x200/belem_brazil_temple_exterior2.jpg" alt="Belém Brazil Temple">
+                <figcaption>Belém Brazil Temple</figcaption>
+            </figure>
+            
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/320x200/4-Rome-Temple-2160935.jpg" alt="Rome Italy Temple">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lisbon-portugal/320x200/03-045a97e8471a9f581e927698521a1d184f4b3753.jpeg" alt="Lisbon Portugal Temple">
+                <figcaption>Lisbon Portugal Temple</figcaption>
+            </figure>
+
+            <figure class="temples">
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/320x200/buenos-aires-argentina-temple-lds-236979-wallpaper.jpg" alt="Buenos Aires Argentina Temple">
+                <figcaption>Buenos Aires Argentina Temple</figcaption>
+            </figure>
+
+
+        </div>
+
+
+    </main> 
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Patrick Marcelo A. S. Armani - Brazil
+        </p>
+    
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+
+    </footer>
+</body>
+</html>
