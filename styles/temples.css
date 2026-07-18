@@ -76,7 +76,7 @@
     }
 
 
-    .navbar {
+    nav {
  /*     position: fixed;
         inset: 10%;
         background-color: var(--light-color);
@@ -89,7 +89,7 @@
         background-color: var(--dark-color);
     }
 
-    .navbar.open {
+    nav.open {
         display: block;
     }
 

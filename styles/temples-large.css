@@ -31,8 +31,8 @@
     }
 
     /* Keeps the navigation always visible on desktop */
-    .navbar,
-    .navbar.open {
+    nav,
+    nav.open {
         display: flex;
         align-items: stretch;
         justify-content: flex-end;
@@ -92,5 +92,4 @@
     .gallery img {
         width: 100%;
     }
-}
 }
