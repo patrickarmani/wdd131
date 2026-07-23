@@ -1,0 +1,95 @@
+@media screen and (min-width: 800px) {
+
+    /* -------------------- HEADER -------------------- */
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+
+        min-height: 80px;
+        padding: 0 2rem;
+        gap: 1rem;  
+    }
+
+    #menu-button {
+        display: flex;
+        align-items: center;
+        width: auto;
+        padding: 1rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+
+    /* hides the hamburger button when the site is open on desktop */
+    .hamburguer-menu {
+        display: none;
+    }
+
+    /* Keeps the navigation always visible on desktop */
+    nav,
+    nav.open {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+
+        width: auto;
+        background-color: transparent;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: stretch;
+
+        height: 100%;
+    }
+
+    .navbar li {
+        display: flex;
+        width: auto;
+    }
+
+    .navbar a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1rem 1.25rem;
+        height: 100%;
+    }
+
+    /* -------------------- MAIN -------------------- */
+
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    /*
+    3 columns of equal size on larger screens.
+    */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 1.5rem;
+    }
+
+    .gallery figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
