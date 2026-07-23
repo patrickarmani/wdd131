@@ -29,6 +29,7 @@
         background-color: var(--secondary-color);
         color: var(--light-color);
         font-family: var(--secondary-font);
+        height: 10rem;
 
 
     }
