@@ -27,12 +27,14 @@
 
 <body>
     <header>
-        <h1>Brazil</h1>
-        <picture>
-            <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
-            <source srcset="images/onca-pintada-sm.webp" media="(min-width: 800px)">
-            <img src="images/hero-small.webp" alt="Onca-pintada" width="400" height="1000">
-        </picture>
+        <div class="place">
+            <h1>Brazil</h1>
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/onca-pintada-sm.webp" media="(min-width: 800px)">
+                <img src="images/hero-small.webp" alt="Onca-pintada" width="400" height="1000">
+            </picture>
+        </div>
 
     </header>
 
@@ -41,6 +43,13 @@
     </main>
 
     <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Patrick Marcelo A. S. Armani - Brazil
+        </p>
+    
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
 
     </footer>
 </body>
