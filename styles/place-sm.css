@@ -1,97 +1,115 @@
 :root {
-    --primary-color: #142912;
-    --secondary-color: black;
-    --terciary-color: #6c757d;
-    --success-color: #030e05;
+    --primary-color: #009C3B;
+    --secondary-color: #002776;
+    --terciary-color: #FFDF00;
     --danger-color: #dc3545;
-    --warning-color: #ffc107;
-    --info-color: #17a2b8;
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
+    --light-color: #FFFFFF;
     --primary-font: 'Roboto', Arial, sans-serif;
     --secondary-font: 'Oswald', 'Open sans', sans-serif; 
     }
 
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
+}
 
     body {
         margin: 0;
         padding: 0;
         font-family: var(--primary-font);
         background-color: var(--light-color);
-        color: var(--dark-color);
     }
-
 
     header {
         background-color: var(--secondary-color);
         color: var(--light-color);
         font-family: var(--secondary-font);
-        height: 10rem;
-
 
     }
-    h1 {
-       font-size: 1.5rem;
-       margin: 0;
-}
 
+    header::after {
+        content: "";
+        display: block;
+        height: 6px;
+        background-color: var(--secondary-color);
+    }
 
+    header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 1rem 0;
+        text-align: center;
+        border-bottom: 10px solid var(--primary-color);
+    }
 
+    picture {
+        display: block;
+        width: 100%;
+    }
 
+    picture img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
     /*--------------------------------------------------MAIN--------------------------------------------------*/
 
     main {
         width: 100%;
         padding: 1rem;
-    }
-
+    } 
+    
     main h2 {
-        margin: 0 0 1.5rem;
+        margin: 0 0 0.5rem;
+        background-color: var(--primary-color);
+        color: var(--light-color);
 
-        color: var(--primary-color);
-        text-align: center;
         font-family: var(--secondary-font);
         font-size: 1.8rem;
+
+        height: 60px;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .gallery {
+    .box {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
 
         width: 100%;
+
     }
 
-    .gallery figure {
-        width: 100%;
-        margin: 0;
+    #box-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    #box-weather img {
+        margin: 1rem 0;
     }
 
-    .gallery img {
-        display: block;
+    .weather-information p {
+        margin: 0.6rem 0;
+    }
 
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+    .weather-information strong {
+        margin-right: 0.25rem;
+    }
 
+    section {
         border: 10px solid var(--light-color);
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    }
-
-    figcaption {
-        margin-top: 0.75rem;
-
-        color: var(--primary-color);
+        min-height: 360px;
+        max-width: 90vw;
         text-align: center;
-        font-family: var(--secondary-font);
-        font-size: 1.1rem;
-        font-weight: 500;
     }
-
+    
         /*----------------------------------------------------footer----------------------------------------*/
     footer {
         width: 100%;

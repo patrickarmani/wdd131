@@ -8,7 +8,7 @@
     <meta name="description"
         content="WDD 131 – W03 Assignment: Country Page - Patrick Marcelo Araújo Silva Armani - Task.">
 
-    <title>Place</title>
+    <title>Country Page</title>
 
     <!-- link for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,10 +18,12 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/place-sm.css">
-    <link rel="stylesheet" href="styles/place-lg.css">
+    <link rel="stylesheet"
+        href="styles/place-lg.css"
+        media="screen and (min-width: 800px)">
 
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/temples.js" defer></script>
+
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -30,15 +32,63 @@
         <div class="place">
             <h1>Brazil</h1>
             <picture>
-                <source srcset="images/brazil-lg.webp" media="(min-width: 500px)">
-                <source srcset="images/brazil-sm-500px.webp" media="(min-width: 300px)">
-                <img src="images/brazil-lg.webp" alt="Brasilia" width="500" height="777">
+                <source
+                    srcset="images/brazil2-sm-500px.webp" media="(max-width: 799px)">
+
+                <source
+                    srcset="images/brazil2-lg.webp" media="(min-width: 800px)">
+
+                <img src="images/brazil2-sm-500px.webp" alt="Sao Paulo, Brazil" width="500" height="889">
             </picture>
         </div>
 
     </header>
 
     <main>
+        <div class="box">
+
+            <section id="box-data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 8.510.417,771 km²</p>
+                <p><strong>Population:</strong> 212,612,000</p>
+                <p><strong>Capital:</strong> Brasília</p>
+                <p><strong>Language:</strong> Portuguese</p>
+                <p><strong>Currency:</strong> Brazilian Real (BRL)</p>
+                <p><strong>Time Zone:</strong>  UTC−03:00 (BRT)</p>
+                <p><strong>Calling Code:</strong> +55</p>
+                <p><strong>Internet TLD:</strong> .br</p>
+
+            </section>
+            
+            <section id="box-weather">
+                    <h2>Weather</h2>
+                    <img src="images/weather-svgrepo-com.svg" alt="weather icon" width="80" height="80">
+                    
+
+                    <div class="weather-information">
+                        <p>
+                            <strong>Temperature:</strong>
+                            <span id="temperature">10</span> °C
+                        </p>
+
+                        <p>
+                            <strong>Conditions:</strong>
+                            Partly Cloudy
+                        </p>
+
+                        <p>
+                            <strong>Wind:</strong>
+                            <span id="wind-speed">5</span> km/h
+                        </p>
+
+                        <p>
+                            <strong>Wind Chill:</strong>
+                            <span id="wind-chill"></span>
+                        </p>
+                    </div>
+
+            </div>
+            </section>
 
     </main>
 
