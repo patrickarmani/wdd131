@@ -156,7 +156,7 @@
 
         text-align: left;
     }
-
+    /* --- control green box in weather*/
     #box-weather h2 {
         grid-column: 1;
         grid-row: 1;
@@ -165,7 +165,7 @@
         left: -20px;
 
         width: 99%;
-        margin-top: 0;
+        margin-top: -10px;
         padding: 0.8rem 4rem 0.8rem 1rem;
 
         background-color: rgba(0, 156, 59, 0.82);
