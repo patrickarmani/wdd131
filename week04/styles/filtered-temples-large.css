@@ -78,18 +78,21 @@
     /*
     3 columns of equal size on larger screens.
     */
+ 
+
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 2rem 1.5rem;
     }
 
-    .gallery figure {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .gallery section {
+        min-width: 0;
+        height: 100%;
     }
 
     .gallery img {
         width: 100%;
+        height: 220px;
+        object-fit: cover;
     }
 }
