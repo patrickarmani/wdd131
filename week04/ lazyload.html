@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patrick Marcelo Araújo Silva Armani">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Patrick Marcelo Araújo Silva Armani -Wee04 -Lazy Loading>
+    <title>Lazy Load Demonstration</title>
+    
+    <!-- link for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/lazyload.css">
+
+    <script src="../scripts/getdates.js" defer></script>
+
+</head>
+
+<body>
+    <main>
+        <h1>Lazy Load Demonstration</h1>
+
+        <picture>
+            <img src="images/city-landscape-at-night.webp" alt="Placehold Image" loading="lazy" width="400" height="600">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo adipisci laborum quas nobis dolor repellendus ipsa odio delectus temporibus tempora!</p>
+        <picture>
+            <img src="images/london.webp" alt="Placehold Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/new-york.webp" alt="Placehold Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/paris.webp" alt="Placehold Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/tokyo.webp" alt="Placehold Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/toronto.webp" alt="Placehold Image" loading="lazy" width="400" height="600">
+        </picture>
+
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Patrick Marcelo A. S. Armani - Brazil
+        </p>
+    
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+
+    </footer>
+
+</body>
+
+
+</html>
