@@ -190,8 +190,6 @@ nonutahLink.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
 });*/
 
-createTempleCard(temples);
-
 function createTempleCard(filteredTemples) {
     const gallery = document.querySelector(".gallery");
 
@@ -214,10 +212,12 @@ function createTempleCard(filteredTemples) {
             `<span class="label">Dedicated:</span> ${temple.dedicated}`;
 
         area.innerHTML =
-            `<span class="label">Size:</span> ${temple.area} sq ft`;
+            `<span class="label">Size:</span> ${temple.area.toLocaleString("en-US")} sq ft`;
 
         img.src = temple.imageUrl;
-        img.alt = `${temple.templeName} Temple`;
+        img.alt = temple.templeName;
+        img.width = 400;
+        img.height = 250;
         img.loading = "lazy";
 
         card.append(name, location, dedication, area, img);
