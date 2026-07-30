@@ -6,8 +6,9 @@
     --light-color: #F8F5F0;
     --text-color: #263238;
     --primary-font: 'Lora',  Times, serif;
-    --secondary-font: 'Lato', 'Open sans', sans-serif; 
+    --secondary-font: 'Lato',  sans-serif; 
     --tertiary-font: 'Playfair Display', serif;
+  
 
 }
 
@@ -73,18 +74,21 @@
         align-self: stretch;
     }
 
-    .font-body,
+
     .font-headings,
-    .font-headings-two {
+    .font-headings-two,
+    .font-body-two {
         color: var(--emphasis-color);
 
     }
 
-    .font-body {
+
+    .font-body-two {
         font-family: var(--secondary-font);
     }
 
-    .font-headings-two { 
+
+    p.font-headings-two { 
         font-family: var(--tertiary-font);
     }
 
