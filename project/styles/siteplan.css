@@ -136,6 +136,11 @@
         background-color: #A58F20;
     }
 
+    figcaption {
+        font-family: var(--secondary-font);
+        color: var(--primary-color);
+    }
+
         /*----------------------------------------------------footer----------------------------------------*/
     footer {
         width: 100%;
