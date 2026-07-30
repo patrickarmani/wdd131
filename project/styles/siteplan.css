@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #1E2B0E;
+    --secondary-color: #B8BA9F;
+    --tertiary-color: #74994B;
+    --emphasis-color: #C75B00;
+    --light-color: #F8F5F0;
+    --text-color: #263238;
+    --primary-font: 'Lora',  Times, serif;
+    --secondary-font: 'Lato', 'Open sans', sans-serif; 
+    --tertiary-font: 'Playfair Display', serif;
+
+}
+
+    body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+}
+
+    header {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        text-align: center;
+        padding: 2rem;
+}
+
+    header h1 {
+        color: var(--light-color);
+
+}
+
+    p {
+        font-family: var(--secondary-font);
+    }
+
+    #palette-link {
+        text-align: center;
+    }
+
+    .description {
+        display: block;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        margin: 15px;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .description img {
+        border:1px solid gray;
+        display: block;
+        margin: 1rem auto;
+        border-radius: 12px;
+        margin-left: 0.75rem;
+        max-width: 70vw;
+    }
+
+    h3.font-headings {
+        font-family: var(--primary-font);
+        
+    }
+
+    .typography {
+        display: flex;
+        align-items: stretch;
+        gap: 3rem;
+
+    }
+
+    .typography-divider {
+        width: 1px;
+        background-color: var(--primary-color);
+        align-self: stretch;
+    }
+
+    .font-body,
+    .font-headings,
+    .font-headings-two {
+        color: var(--emphasis-color);
+
+    }
+
+    .font-body {
+        font-family: var(--secondary-font);
+    }
+
+    .font-headings-two { 
+        font-family: var(--tertiary-font);
+    }
+
+    .color-palette {
+        display: flex !important;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+       
+    }
+
+    .color-card {
+        width: 110px;
+        text-align: center;
+    }
+
+    .color {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 0.75rem;
+        border: 2px solid black;
+        border-radius: 6px;
+    }
+
+    .bronze {
+        background-color: #C75B00;
+    }
+
+    .evergreen {
+        background-color: #1E2B0E;
+    }
+
+    .dry-sage {
+        background-color: #B8BA9F;
+    }
+
+    .sage {
+        background-color: #74994B;
+    }
+
+    .gold {
+        background-color: #A58F20;
+    }
+
+        /*----------------------------------------------------footer----------------------------------------*/
+    footer {
+        width: 100%;
+        padding: 1rem;
+
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+
+        text-align: center;
+        font-family: var(--primary-font);
+    }
+
+    footer p {
+        margin: 0.25rem 0;
+
+        color: var(--light-color);
+        font-size: 1rem;
+    }
