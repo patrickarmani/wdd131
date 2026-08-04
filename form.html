@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patrick Armani">
+    <meta name="description" content="Creation of a product review form page applying a good design principles.">
+    <title>Form</title>
+
+        <!-- link for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-lg.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    
+
+</head>
+<body>
+    <header>
+
+        <h1> Product Review  </h1>
+
+    </header>
+
+<main>
+    <form method="get" action="review.html">
+
+        <div class="field">
+            <label for="product">Product Name</label>
+
+            <select id="product" name="product" required>
+                <option value="" disabled selected>
+                    Choose a Product...
+                </option>
+            </select>
+        </div>
+
+        <fieldset class="field">
+            <legend>Overall Rating</legend>
+
+            <div class="rating-options">
+                <label for="rating1">
+                <span>★</span>
+
+                <input
+                    type="radio"
+                    id="rating1"
+                    name="rating"
+                    value="1"
+                    required
+                >
+            </label>
+
+            <label for="rating2">
+                <span>★★</span>
+                <input
+                    type="radio"
+                    id="rating2"
+                    name="rating"
+                    value="2"
+                >
+            </label>
+
+            <label for="rating3">
+                <span>★★★</span>
+                <input
+                    type="radio"
+                    id="rating3"
+                    name="rating"
+                    value="3"
+                >
+            </label>
+
+            <label for="rating4">
+                <span>★★★★</span>
+                <input
+                    type="radio"
+                    id="rating4"
+                    name="rating"
+                    value="4"
+                >
+            </label>
+
+            <label for="rating5">
+                <span>★★★★★</span>
+                <input
+                    type="radio"
+                    id="rating5"
+                    name="rating"
+                    value="5"
+                >
+            </label>
+            </div>
+        </fieldset>
+
+        <div class="field">
+            <label for="installation-date">
+                Date of Installation
+            </label>
+
+            <input
+                type="date"
+                id="installation-date"
+                name="installation-date"
+                required
+            >
+        </div>
+
+        <fieldset class="field">
+            <legend>
+                Which features did you find useful in the product?
+                <span class="optional">
+                    (Check all that apply)
+                </span>
+            </legend>
+
+            <label class="checkbox-option" for="durability">
+                <input
+                    type="checkbox"
+                    id="durability"
+                    name="features"
+                    value="durability"
+                >
+                Durability
+            </label>
+
+            <label class="checkbox-option" for="ease-of-use">
+                <input
+                    type="checkbox"
+                    id="ease-of-use"
+                    name="features"
+                    value="ease-of-use"
+                >
+                Ease of Use
+            </label>
+
+            <label class="checkbox-option" for="performance">
+                <input
+                    type="checkbox"
+                    id="performance"
+                    name="features"
+                    value="performance"
+                >
+                Performance
+            </label>
+
+            <label class="checkbox-option" for="design">
+                <input
+                    type="checkbox"
+                    id="design"
+                    name="features"
+                    value="design"
+                >
+                Design
+            </label>
+        </fieldset>
+
+        <div class="field">
+            <label for="review">
+                Written Review
+                <span class="optional">(Optional)</span>
+            </label>
+
+            <textarea
+                id="review"
+                name="review"
+                rows="6"
+            ></textarea>
+        </div>
+
+        <div class="field">
+            <label for="username">
+                Your Name
+                <span class="optional">(Optional)</span>
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+            >
+        </div>
+
+        <input type="submit" value="Post Review">
+
+    </form>
+</main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Patrick Marcelo A. S. Armani - Brazil
+        </p>
+    
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+:root {
+    --primary-color: #000807;
+    --secondary-color:#a2a3bb;
+    --hightlight-color: #9395d3;
+    --light-color: #fbf9ff;
+    --primary-font: 'Oswald', Arial, sans-serif;
+    --secondary-font:'Roboto', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--primary-font);
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+   
+}
+/* ---------------- Header ---------------- */
+
+header {
+    width: 100%;
+    padding: 1.2rem;
+
+    background-color: var(--primary-color);
+    color: var(--light-color);
+
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+
+    font-family: var(--primary-font);
+    font-size: 2rem;
+}
+
+p {
+    margin: 20px;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    color:#000807;
+    text-align: center;
+}
