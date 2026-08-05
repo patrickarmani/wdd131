@@ -13,20 +13,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <a href="index.html" class="brand">
-            <img src="images/logo.webp" alt="Medicinal Plants logo" width="300" height="300">
+            <img src="images/logo.webp" alt="Medicinal Plants logo" loading="lazy" width="300" height="300">
             <span>Doctor Nature</span>
         </a>
 
-        <button id="menu-button" aria-label="Open navigation menu">
+        <!--<button id="menu-button" aria-label="Open navigation menu">
             ☰
+        </button>-->
+
+        <button
+            id="menu-button"
+            class="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation"
+        >
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
         </button>
 
-        <nav>
+        <nav  id="navigation" class="navigation">
             <!-- links -->
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plants.html">Plants</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+             </ul>
         </nav>
     </header>
 
@@ -40,6 +61,7 @@
                 <img
                     src="images/hero3.webp"
                     alt="Medicinal plants growing in a natural garden"
+                    loading="lazy"
                     width="400"
                     height="220"
                 >
@@ -49,10 +71,14 @@
         <section class="hero-content">
             <h1>Discover the Power of Medicinal Plants</h1>
 
-            <p>
-                Learn how plants have traditionally been used to support
-                health and well-being.
-            </p>
+                <div class="title-divider">
+                    <span>🍃</span>
+                </div>
+
+                <p>
+                    Learn how plants have traditionally been used to support
+                    health and well-being.
+                </p>
 
             <a
                 href="plants.html"
@@ -77,6 +103,16 @@
                 >
 
         </section>
+
+        <section class="info-section">
+            <button class="info-btn" type="button">
+                <span class="info-icon">ⓘ</span>
+                <span class="info-text">
+                    Our goal is to educate and inspire individuals to explore the natural remedies that plants offer.
+                </span>
+            </button>
+        </section>
+
     </main>
 
     <footer>

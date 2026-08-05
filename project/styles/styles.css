@@ -4,7 +4,6 @@
     --tertiary-color: #74994B;
     --emphasis-color: #C75B00;
     --light-color: #F8F5F0;
-    --text-color: #263238;
     --primary-font: 'Lora',  Times, serif;
     --secondary-font: 'Lato',  sans-serif; 
     --tertiary-font: 'Playfair Display', serif;
@@ -17,58 +16,83 @@
 }
 
     body {
-    font-family: var(--primary-font);
-    margin: 0;
-    padding: 0;
+        font-family: var(--primary-font);
+        margin: 0;
+        padding: 0;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
+    .header {
+        position: relative;
 
-    width: 100%;
-    height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        padding: var(--primary-color);
+        padding: 1rem 2rem 1rem 1rem;
 
-    padding: 1rem 2rem 1rem 1rem;
+        /*background: rgba(255, 255, 255, 0.006);
 
-    background: rgba(30, 43, 14, 0.95);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(1px);*/
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    z-index: 100;
-}
+        /*z-index: 100;*/
+    }
 
     .hero-image {
         display: block;
     }
 
     .hero-image img {
-        margin-top: 30px;
+        margin-top: -2rem;
         display: block;
-        width: 100%;
-        height: 320px;
+        width: 85%;
+        height: auto;
         object-fit: cover;
+        align-items:center;
     }
 
     .hero-content {
         margin-top: -2rem;
         padding: 1.5rem;
         text-align: center;
+        font-family: var(--tertiary-font);
+        font-weight: 700;
+        line-height:1.15;
+        color: var(--tertiary-color);
+  
+    }
+
+
+    .hero-content p {
+        color: var(--emphasis-color);
         font-family: var(--secondary-font);
+    }
+
+/*control a leave icon in the middle of the line*/
+    .title-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 1rem auto 1.5rem;
+    }
+
+    .title-divider::before,
+    .title-divider::after {
+        content: "";
+
+        width: 70px;
+        height: 2px;
+
+        background: var(--tertiary-color);
+    }
+
+    .title-divider span {
+        margin: 0 12px;
+        font-size: 1.2rem;
         color: var(--emphasis-color);
     }
-
-    .hero-content h1 {
-        color: var(--tertiary-color);
-        font-family: var(--tertiary-font);
-    }
-
     .hero-button {
         display: block;
 
@@ -119,35 +143,125 @@ header {
     .brand {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: -2rem;
         color: var(--light-color);
         text-decoration: none;
 }
 
-    .brand h1 {
+    .brand span {
         margin: 0;
-        font-size: 1.3rem;
+        font-size: 1rem;
+        margin-left: -1.5rem;
         font-family: var(--primary-font);
-        color: var(--light-color);
+        color: var(--primary-color);
         white-space: nowrap;
     }
 
     .brand img {
-        width: 60px;
-        height: 60px;
+        width: 110px;
+        height: 110px;
         object-fit: contain;
     }
 
-    #menu-button {
+    /*#menu-button {
         margin-left: auto;
         width: auto;
         padding: 0;
         background: transparent;
         border: none;
-        color: var(--light-color);
+        color: var(--emphasis-color);
         font-size: 2rem;
         cursor: pointer;
+    }*/
+
+    #menu-button {
+        width: 44px;
+        height: 44px;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+
+        padding: 0;
+        background: transparent;
+        
+        cursor: pointer;        
     }
+
+    .menu-button span {
+        width: 30px;
+        height: 3px;
+
+        background-color: var(--emphasis-color);
+        border-radius: 2px;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+    /* I used it to hide the menu at the beginning.*/
+
+    .navigation {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+}
+
+    .navigation.open {
+        display: block;
+
+}
+
+    .navigation ul {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+}
+
+    .navigation a {
+        display: block;
+
+        padding: 1rem;
+
+        color: var(--primary-color);
+        text-decoration: none;
+        text-align: center;
+        font-family: var(--secondary-font);
+        font-weight: 700;
+        width: 30%;
+        margin-left: 60%;
+        /*background: rgba(116, 153, 75, 0.5);*/
+        background-color: var(--secondary-color);
+        margin-bottom: 5px;
+}
+
+    .navigation a:hover {
+        background-color: var(--emphasis-color);
+        color: var(--light-color);
+}
+
+    /* I used it to create the hamburger menu animation. First line*/
+    .menu-button.open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+}
+
+    /* Second line */
+    .menu-button.open span:nth-child(2) {
+        opacity: 0;
+}   
+    /* third line */
+    .menu-button.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+}
 
     .featured-content {
         display: flex;
@@ -155,7 +269,40 @@ header {
         align-items: center;
         gap: 1rem;
         padding: 1rem;
-        margin-top: -2rem;
+        margin-top: -4rem;
+    }
+
+
+    .featured-content img {
+       width: 100%;
+       height: auto;
+       filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));
+    }
+
+    .info-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        background: var(--secondary-color);
+        cursor: pointer;
+
+        font-family: var(--secondary-font);
+        color: var(--primary-color);
+        margin-top: -1rem;
+    }
+
+    .info-icon {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+    }
+
+    .info-text {
+        text-align: left;
+        line-height: 1.4;
+        font-size: 0.8rem;
     }
     
 
@@ -166,8 +313,8 @@ header {
         width: 100%;
         padding: 1rem;
 
-        background-color: var(--primary-color);
-        color: var(--light-color);
+        background-color: none;
+        color: var(--primary-color);
 
         text-align: center;
         font-family: var(--primary-font);
@@ -176,6 +323,6 @@ header {
     footer p {
         margin: 0.25rem 0;
 
-        color: var(--light-color);
+        color: var(--primary-color);
         font-size: 1rem;
     }
