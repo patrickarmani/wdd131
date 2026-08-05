@@ -2,6 +2,7 @@
     --primary-color: #1E2B0E;
     --secondary-color: #B8BA9F;
     --tertiary-color: #74994B;
+    --quaternary-color: #A58F20;
     --emphasis-color: #C75B00;
     --light-color: #F8F5F0;
     --primary-font: 'Lora',  Times, serif;
@@ -44,12 +45,12 @@
     }
 
     .hero-image img {
-        margin-top: -2rem;
+  
+        margin:auto;
         display: block;
         width: 85%;
         height: auto;
         object-fit: cover;
-        align-items:center;
     }
 
     .hero-content {
@@ -65,8 +66,9 @@
 
 
     .hero-content p {
-        color: var(--emphasis-color);
+        color: var(--quaternary-color);
         font-family: var(--secondary-font);
+
     }
 
 /*control a leave icon in the middle of the line*/
@@ -105,6 +107,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));
+        
 
         text-decoration: none;
         cursor: pointer;
@@ -242,6 +246,8 @@
         /*background: rgba(116, 153, 75, 0.5);*/
         background-color: var(--secondary-color);
         margin-bottom: 5px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        border: 1px  var(--light-color);
 }
 
     .navigation a:hover {
@@ -276,16 +282,16 @@
     .featured-content img {
        width: 100%;
        height: auto;
-       filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));
+
     }
 
     .info-btn {
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        padding: 1rem;
+        padding: 1rem 1.25rem;
         border: 2px solid var(--primary-color);
-        border-radius: 10px;
+        border-radius: 12px;
         background: var(--secondary-color);
         cursor: pointer;
 
