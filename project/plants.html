@@ -6,19 +6,21 @@
     <meta
         name="description"
         content="Website with purpose to provides information about medicinal plants, their recommended uses, and their scientific names.">
-        <title>Doctor Nature - Plants that heal</title>
+        <title>Doctor Nature - Plants Page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/plants.css">
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/plants.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+
 </head>
 <body>
-    <header class="header">
+<header class="header">
         <a href="index.html" class="brand">
             <img src="images/logo.webp" alt="Medicinal Plants logo" loading="lazy" width="300" height="300">
             <span>Doctor Nature</span>
@@ -51,7 +53,6 @@
              </ul>
         </nav>
     </header>
-
     <main>
         <div class="hero-image">
             <picture>
@@ -61,60 +62,75 @@
                 >
                 <img
                     src="images/hero3.webp"
-                    alt="Medicinal plants growing in a natural garden"
+                    alt="Medicinal Plants hero image"
                     loading="lazy"
-                    width="400"
-                    height="220"
                 >
             </picture>
         </div>
 
-        <section class="hero-content">
-            <h1>Discover the Power of Medicinal Plants</h1>
+    <section class="plants-section">
+        <h2>Medical Plants</h2>
 
-                <div class="title-divider">
-                    <span>🍃</span>
+        <div class="plants-grid">
+
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/plants/aloe-vera.webp" alt="Aloe vera plant" loading="lazy">
+                    <button class="favorite" aria-label="Add Aloe vera to favorites">
+                        ♡
+                    </button>
                 </div>
 
-                <p>
-                    Learn how plants have traditionally been used to support
-                    health and well-being.
-                </p>
+                <h3>Aloe Vera</h3>
+            </article>
 
-            <a
-                href="plants.html"
-                class="hero-button"
-                aria-label="Explore medicinal plants"
-            >
-                <span class="visually-hidden">Explore Plants</span>
-            </a>
-        </section>
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/plants/chamomile.webp" alt="Chamomile plant" loading="lazy">
+                    <button class="favorite" aria-label="Add Chamomile to favorites">
+                        ♡
+                    </button>
+                </div>
 
-        <section class="featured-content">
-            <picture>
-                <source
-                    media="(min-width: 768px)"
-                    srcset="images/central-image.webp"
-                >
-                <img
-                    src="images/central-image.webp"
-                    alt="A variety of medicinal plants in a garden"
-                    width="300"
-                    height="180"
-                >
+                <h3>Chamomile</h3>
+            </article>
 
-        </section>
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/plants/mint.webp" alt="Mint plant" loading="lazy">
+                    <button class="favorite" aria-label="Add Mint to favorites">
+                        ♡
+                    </button>
+                </div>
 
-        <section class="info-section">
-            <button class="info-btn" type="button">
-                <span class="info-icon">ⓘ</span>
-                <span class="info-text">
-                    Our goal is to educate and inspire individuals to explore the natural remedies that plants offer.
-                </span>
-            </button>
-        </section>
+                <h3>Mint</h3>
+            </article>
 
-    </main>
+            <article class="plant-card">
+                <div class="plant-image">
+                    <img src="images/plants/lavender.webp" alt="Lavender plant" loading="lazy">
+                    <button class="favorite" aria-label="Add Lavender to favorites">
+                        ♡
+                    </button>
+                </div>
+
+                <h3>Lavender</h3>
+            </article>
+
+            <Article class
+
+        </div>
+
+        <button
+            id="load-more-button"
+            class="load-more-button"
+            type="button"
+        >
+            <span id="load-button-text">Load more plants</span>
+            <span class="load-more-arrow" aria-hidden="true">↓</span>
+        </button>        
+    </section>
+</main>
 
     <footer>
         <p>
@@ -127,4 +143,3 @@
 
     </footer>
 </body>
-</html>

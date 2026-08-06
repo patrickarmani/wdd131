@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #1E2B0E;
+    --secondary-color: #B8BA9F;
+    --tertiary-color: #74994B;
+    --quaternary-color: #A58F20;
+    --emphasis-color: #C75B00;
+    --light-color: #F8F5F0;
+
+    --primary-font: "Lora", Times, serif;
+    --secondary-font: "Lato", sans-serif;
+    --tertiary-font: "Playfair Display", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.brand span {
+    margin-left: -1.5rem;
+
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.brand img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+#menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-button span {
+    width: 30px;
+    height: 3px;
+
+    background-color: var(--emphasis-color);
+    border-radius: 2px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+ /* I used it to hide the menu at the beginning.*/
+.navigation {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation a {
+    display: block;
+
+    width: 30%;
+    margin-left: 60%;
+    margin-bottom: 5px;
+    padding: 1rem;
+
+    border: 1px solid var(--light-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: var(--emphasis-color);
+    color: var(--light-color);
+}
+    /* I used it to create the hamburger menu animation. First line*/
+.menu-button.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+    /* Second line */
+.menu-button.open span:nth-child(2) {
+    opacity: 0;
+}
+    /* third line */
+.menu-button.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+/*----------------------------------------------------footer----------------------------------------*/
+footer {
+    width: 100%;
+    padding: 1rem;
+
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
+footer p {
+    margin: 0.25rem 0;
+
+    color: var(--primary-color);
+    font-size: 1rem;
+}
