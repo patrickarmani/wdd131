@@ -53,6 +53,8 @@
              </ul>
         </nav>
     </header>
+
+
     <main>
         <div class="hero-image">
             <picture>
@@ -68,68 +70,274 @@
             </picture>
         </div>
 
-    <section class="plants-section">
-        <h2>Medical Plants</h2>
+        <section class="plants-section">
+            <h2>Medicinal Plants</h2>
 
-        <div class="plants-grid">
+            <div id="plants-grid" class="plants-grid">
 
-            <article class="plant-card">
-                <div class="plant-image">
-                    <img src="images/plants/aloe-vera.webp" alt="Aloe vera plant" loading="lazy">
-                    <button class="favorite" aria-label="Add Aloe vera to favorites">
-                        ♡
-                    </button>
-                </div>
+                <article
+                    class="plant-card"
+                    data-scientific="Aloe barbadensis miller"
+                    data-origin="Arabian Peninsula"
+                    data-uses="Minor burns,Skin irritation,Minor wounds"
+                >
+                    <div class="card-inner">
 
-                <h3>Aloe Vera</h3>
-            </article>
+                        <div class="card-front">
+                            <div class="plant-image">
+                                <img
+                                    src="images/plants/aloe-vera.webp"
+                                    alt="Aloe vera plant"
+                                    loading="lazy"
+                                >
 
-            <article class="plant-card">
-                <div class="plant-image">
-                    <img src="images/plants/chamomile.webp" alt="Chamomile plant" loading="lazy">
-                    <button class="favorite" aria-label="Add Chamomile to favorites">
-                        ♡
-                    </button>
-                </div>
+                                <button
+                                    class="favorite"
+                                    type="button"
+                                    aria-label="Add Aloe vera to favorites"
+                                >
+                                    ♡
+                                </button>
+                            </div>
 
-                <h3>Chamomile</h3>
-            </article>
+                            <h3>Aloe Vera</h3>
 
-            <article class="plant-card">
-                <div class="plant-image">
-                    <img src="images/plants/mint.webp" alt="Mint plant" loading="lazy">
-                    <button class="favorite" aria-label="Add Mint to favorites">
-                        ♡
-                    </button>
-                </div>
+                            <div class="plant-details">
+                                <p>
+                                    <strong>Scientific name:</strong>
+                                    <span class="scientific-name"></span>
+                                </p>
 
-                <h3>Mint</h3>
-            </article>
+                                <p>
+                                    <strong>Origin:</strong>
+                                    <span class="plant-origin"></span>
+                                </p>
 
-            <article class="plant-card">
-                <div class="plant-image">
-                    <img src="images/plants/lavender.webp" alt="Lavender plant" loading="lazy">
-                    <button class="favorite" aria-label="Add Lavender to favorites">
-                        ♡
-                    </button>
-                </div>
+                                <button class="flip-button" type="button">
+                                    Flip card ↻
+                                </button>
 
-                <h3>Lavender</h3>
-            </article>
+                                <button class="close-card" type="button">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
 
-            <Article class
+                        <div class="card-back">
+                            <h3>Aloe Vera</h3>
 
-        </div>
+                            <h4>Traditional medicinal uses</h4>
 
-        <button
-            id="load-more-button"
-            class="load-more-button"
-            type="button"
-        >
-            <span id="load-button-text">Load more plants</span>
-            <span class="load-more-arrow" aria-hidden="true">↓</span>
-        </button>        
-    </section>
+                            <ul class="uses-list"></ul>
+
+                            <button class="flip-button" type="button">
+                                ↶ Back
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article 
+                    class="plant-card"
+                    data-scientific="Matricaria chamomilla"
+                    data-origin="Europe and Western Asia"
+                    data-uses="Digestive discomfort,Relaxation,Sleep support"
+                >
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <div class="plant-image">
+                                <img
+                                    src="images/plants/chamomile.webp"
+                                    alt="Chamomile plant"
+                                    loading="lazy"
+                                >
+
+                                <button
+                                    class="favorite"
+                                    type="button"
+                                    aria-label="Add Chamomile to favorites"
+                                >
+                                    ♡
+                                </button>
+                            </div>
+
+                            <h3>Chamomile</h3>
+
+                            <div class="plant-details">
+                                <p>
+                                    <strong>Scientific name:</strong>
+                                    <span class="scientific-name"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Origin:</strong>
+                                    <span class="plant-origin"></span>
+                                </p>
+
+                                <button class="flip-button" type="button">
+                                    Flip card ↻
+                                </button>
+
+                                <button class="close-card" type="button">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <h3>Chamomile</h3>
+
+                            <h4>Traditional medicinal uses</h4>
+
+                            <ul class="uses-list"></ul>
+
+                            <button class="flip-button" type="button">
+                                ↶ Back
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article 
+                    class="plant-card initially-hidden"
+                    data-scientific="Mentha × piperita"
+                    data-origin="Europe and Middle East"
+                    data-uses="Digestive discomfort,Nausea,Headache"
+                >
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <div class="plant-image">
+                                <img
+                                    src="images/plants/mint.webp"
+                                    alt="Mint plant"
+                                    loading="lazy"
+                                >
+
+                                <button
+                                    class="favorite"
+                                    type="button"
+                                    aria-label="Add Mint to favorites"
+                                >
+                                    ♡
+                                </button>
+                            </div>
+
+                            <h3>Mint</h3>
+
+                            <div class="plant-details">
+                                <p>
+                                    <strong>Scientific name:</strong>
+                                    <span class="scientific-name"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Origin:</strong>
+                                    <span class="plant-origin"></span>
+                                </p>
+
+                                <button class="flip-button" type="button">
+                                    Flip card ↻
+                                </button>
+
+                                <button class="close-card" type="button">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <h3>Mint</h3>
+
+                            <h4>Traditional medicinal uses</h4>
+
+                            <ul class="uses-list"></ul>
+
+                            <button class="flip-button" type="button">
+                                ↶ Back
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article 
+                    class="plant-card initially-hidden"
+                    data-scientific="Lavandula angustifolia"
+                    data-origin="Mediterranean region"
+                    data-uses="Relaxation,Sleep support,Mild anxiety symptoms"
+                >
+                    <div class="card-inner">
+
+                        <div class="card-front">
+                            <div class="plant-image">
+                                <img
+                                    src="images/plants/lavender.webp"
+                                    alt="Lavender plant"
+                                    loading="lazy"
+                                >
+
+                                <button
+                                    class="favorite"
+                                    type="button"
+                                    aria-label="Add Lavender to favorites"
+                                >
+                                    ♡
+                                </button>
+                            </div>
+
+                            <h3>Lavender</h3>
+
+                            <div class="plant-details">
+                                <p>
+                                    <strong>Scientific name:</strong>
+                                    <span class="scientific-name"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Origin:</strong>
+                                    <span class="plant-origin"></span>
+                                </p>
+
+                                <button class="flip-button" type="button">
+                                    Flip card ↻
+                                </button>
+
+                                <button class="close-card" type="button">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <h3>Lavender</h3>
+
+                            <h4>Traditional medicinal uses</h4>
+
+                            <ul class="uses-list"></ul>
+
+                            <button class="flip-button" type="button">
+                                ↶ Back
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+
+            <button
+                id="load-more-button"
+                class="load-more-button"
+                type="button"
+            >
+                <span id="load-button-text">Load more plants</span>
+                <span class="load-more-arrow" aria-hidden="true">↓</span>
+            </button>        
+        </section>
 </main>
 
     <footer>

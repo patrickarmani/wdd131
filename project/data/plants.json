@@ -1,0 +1,80 @@
+[
+    {
+        "id": 5,
+        "name": "Rosemary",
+        "scientificName": "Salvia rosmarinus",
+        "origin": "Mediterranean region",
+        "image": "images/plants/rosemary.webp",
+        "alt": "Green rosemary plant",
+        "uses": [
+            "Digestive discomfort",
+            "Traditional pain relief",
+            "General antioxidant use"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Ginger",
+        "scientificName": "Zingiber officinale",
+        "origin": "Southeast Asia",
+        "image": "images/plants/ginger.webp",
+        "alt": "Fresh ginger root",
+        "uses": [
+            "Nausea",
+            "Digestive discomfort",
+            "Motion sickness"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Eucalyptus",
+        "scientificName": "Eucalyptus globulus",
+        "origin": "Australia",
+        "image": "images/plants/eucalyptus.webp",
+        "alt": "Green eucalyptus leaves",
+        "uses": [
+            "Respiratory discomfort",
+            "Cough relief",
+            "Nasal congestion"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Lemon",
+        "scientificName": "Citrus limon",
+        "origin": "South Asia",
+        "image": "images/plants/lemon.webp",
+        "alt": "Fresh lemon fruit",
+        "uses": [
+            "Digestive support",
+            "Sore throat relief",
+            "General antioxidant use"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Asthma Plant",
+        "scientificName": "Euphorbia hirta",
+        "origin": "Tropical regions",
+        "image": "images/plants/asthma-plant.webp",
+        "alt": "Fresh asthma plant leaves",
+        "uses": [
+            "Traditional respiratory use",
+            "Cough relief",
+            "Traditional bronchial support"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Passion Flower",
+        "scientificName": "Passiflora incarnata",
+        "origin": "Southeastern North America",
+        "image": "images/plants/passion-flower.webp",
+        "alt": "Passion flower with purple and white petals",
+        "uses": [
+            "Relaxation",
+            "Sleep support",
+            "Mild anxiety symptoms"
+        ]
+    }
+]

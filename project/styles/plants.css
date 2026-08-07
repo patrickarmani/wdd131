@@ -111,6 +111,145 @@
     line-height: 1;
 }
 
+.initially-hidden {
+    display: none;
+}
+
+.favorite {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+
+    color: var(--emphasis-color);
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.favorite:hover {
+    color: var(--primary-color);
+
+}
+
+
+    .plant-card {
+        position: relative;
+        overflow: hidden;
+
+        border: 1px solid var(--primary-color);
+        background-color: var(--secondary-color);
+
+        cursor: pointer;
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .plant-card:hover {
+        transform: translateY(-3px);
+
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .plant-card.expanded {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        cursor: default;
+    }
+
+    .plant-details {
+        display: none;
+
+        padding: 0.75rem 1rem 1rem;
+    }
+
+    .plant-card.expanded .plant-details {
+        display: block;
+    }
+
+
+    .card-inner {
+        position: relative;
+
+        transition: transform 0.6s ease;
+        transform-style: preserve-3d;
+    }
+
+    .plant-card.flipped .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .card-back {
+        display: none;
+
+        min-height: 350px;
+        padding: 2rem 1.5rem;
+
+        background-color: var(--primary-color);
+        color: var(--light-color);
+
+        transform: rotateY(180deg);
+    }
+
+    .plant-card.flipped .card-front {
+        display: none;
+    }
+
+    .plant-card.flipped .card-back {
+        display: block;
+    }
+
+.card-back h3 {
+    margin-top: 0;
+
+    font-family: var(--tertiary-font);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*----------------------stylization of the verse----------------------------*/
+    .card-back h4 {
+        font-family: var(--secondary-font);
+        font-size: 1rem;
+    }
+
+    .uses-list {
+        padding-left: 1.5rem;
+
+        font-family: var(--secondary-font);
+        line-height: 1.8;
+    }
+/*--------------------------button styling-------------------------*/
+    .flip-button,
+    .close-card {
+        padding: 0.7rem 1rem;
+        margin: 0.5rem;
+
+        border: 1px solid var(--primary-color);
+        border-radius: 6px;
+
+        background-color: var(--light-color);
+        color: var(--primary-color);
+
+        font-family: var(--secondary-font);
+
+        cursor: pointer;
+    }
+
 @media screen and (max-width: 350px) {
     .plants-grid {
         gap: 0.4rem;
