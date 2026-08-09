@@ -16,6 +16,8 @@ function createPlantCard(plant) {
     article.dataset.scientific = plant.scientificName;
     article.dataset.origin = plant.origin;
     article.dataset.uses = plant.uses.join(",");
+    article.dataset.countries = JSON.stringify(plant.countries);
+    article.dataset.id = plant.id;
 
     article.innerHTML = `
         <div class="card-inner">
@@ -66,6 +68,11 @@ function createPlantCard(plant) {
                 <h4>Traditional medicinal uses</h4>
 
                 <ul class="uses-list"></ul>
+
+                <div class="countries-section">
+                    <h4>Countries where this plant is found or cultivated</h4>
+                    <div class="countries-list"></div>
+                </div>
 
                 <button class="flip-button" type="button">
                     ↶ Back
@@ -127,6 +134,7 @@ async function loadPlantsData() {
         }
 
         plants = await response.json();
+        await openRequestedPlant(); //Added to ensure it runs after plants.json finishes loading.
 
     } catch (error) {
         console.error("Error loading plants:", error);
@@ -165,11 +173,23 @@ function setupPlantCard(card) {
 //When clicking the heart icon, the card should not open.
 
 function showPlantDetails(card) {
-    const scientificName = card.dataset.scientific || "Not available";
-    const origin = card.dataset.origin || "Not available";
-    const uses = card.dataset.uses
-        ? card.dataset.uses.split(",")
-        : [];
+
+    const scientificName =
+        card.dataset.scientific || "Not available";
+
+    const origin =
+        card.dataset.origin || "Not available";
+
+    const uses =
+        card.dataset.uses
+            ? card.dataset.uses.split(",")
+            : [];
+
+    const countries =
+        card.dataset.countries
+            ? JSON.parse(card.dataset.countries)
+            : {};
+
 
     const scientificElement =
         card.querySelector(".scientific-name");
@@ -180,24 +200,81 @@ function showPlantDetails(card) {
     const usesList =
         card.querySelector(".uses-list");
 
+    const countriesElement =
+        card.querySelector(".countries-list");
+
+
     if (scientificElement) {
         scientificElement.textContent = scientificName;
     }
+
 
     if (originElement) {
         originElement.textContent = origin;
     }
 
+
     if (usesList) {
+
         usesList.innerHTML = "";
 
         uses.forEach((use) => {
-            const listItem = document.createElement("li");
 
-            listItem.textContent = use.trim();
+            const listItem =
+                document.createElement("li");
+
+            listItem.textContent =
+                use.trim();
 
             usesList.appendChild(listItem);
+
         });
+    }
+
+
+    if (countriesElement) {
+
+        countriesElement.innerHTML = "";
+
+        Object.entries(countries).forEach(
+            ([continent, countryList]) => {
+
+                const continentBlock =
+                    document.createElement("div");
+
+                continentBlock.classList.add(
+                    "continent-group"
+                );
+
+
+                const continentTitle =
+                    document.createElement("strong");
+
+                continentTitle.textContent =
+                    `${continent}: `;
+
+
+                const countriesText =
+                    document.createElement("span");
+
+                countriesText.textContent =
+                    countryList.join(", ");
+
+
+                continentBlock.appendChild(
+                    continentTitle
+                );
+
+                continentBlock.appendChild(
+                    countriesText
+                );
+
+                countriesElement.appendChild(
+                    continentBlock
+                );
+
+            }
+        );
     }
 }
 
@@ -233,3 +310,76 @@ document.querySelectorAll(".plant-card")
     .forEach((card) => {
         setupPlantCard(card);
     });
+
+//-----------------search----------------------------------
+async function openRequestedPlant() {
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const requestedPlantId =
+        params.get("plant");
+
+
+    if (!requestedPlantId) {
+        return;
+    }
+
+
+    let card =
+        document.querySelector(
+            `.plant-card[data-id="${requestedPlantId}"]`
+        );
+
+
+    /*
+       Card already exists in HTML
+    */
+
+    if (card) {
+
+        card.classList.remove("initially-hidden");
+
+        card.classList.add("expanded");
+
+        showPlantDetails(card);
+
+        card.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        return;
+    }
+
+
+    /*
+       Card comes from JSON
+    */
+
+    const requestedPlant =
+        plants.find(
+            (plant) =>
+                String(plant.id) === requestedPlantId
+        );
+
+
+    if (!requestedPlant) {
+        return;
+    }
+
+
+    card = createPlantCard(requestedPlant);
+
+    plantsGrid.prepend(card);
+
+    card.classList.add("expanded");
+
+    showPlantDetails(card);
+
+    card.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}

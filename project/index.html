@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/home.css">
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/explore-plants.js" defer></script> <!--New js to explore plants-->
 </head>
 <body>
     <header class="header">
@@ -81,14 +82,135 @@
                     health and well-being.
                 </p>
 
+            <!-- New id used by explore-plants.js -->
             <a
                 href="plants.html"
+                id="explore-plants-button"
                 class="hero-button"
                 aria-label="Explore medicinal plants"
             >
                 <span class="visually-hidden">Explore Plants</span>
             </a>
+               
         </section>
+
+        <!-- Form to search medicinal plants -->
+        <dialog
+            id="plant-search-dialog"
+            class="plant-search-dialog"
+        >
+            <form
+                id="plant-search-form"
+                class="plant-search-form"
+            >
+
+                <button
+                    type="button"
+                    id="close-search-dialog"
+                    class="search-close-button"
+                    aria-label="Close search form"
+                >
+                    ×
+                </button>
+
+                <h2>Explore Medicinal Plants</h2>
+
+                <p class="search-intro">
+                    Search by plant name, scientific name, or health condition.
+                </p>
+
+                <div class="search-field">
+                    <label for="plant-name-search">
+                        Plant name or scientific name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="plant-name-search"
+                        name="plantName"
+                        placeholder="Example: Rosemary or Salvia rosmarinus"
+                    >
+                </div>
+
+                <div class="search-field">
+                    <label for="condition-search">
+                        Health condition
+                    </label>
+
+                    <input
+                        type="text"
+                        id="condition-search"
+                        name="condition"
+                        placeholder="Example: nausea, cough, sleep"
+                    >
+                </div>
+
+                <fieldset class="essential-oil-filter">
+
+                    <legend>
+                        Would you like to filter the results to show only plants
+                        that have an essential oil?
+                    </legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="essentialOil"
+                            value="yes"
+                        >
+                        Yes
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="essentialOil"
+                            value="no"
+                        >
+                        No
+                    </label>
+
+                    <p
+                        id="essential-oil-error"
+                        class="form-error"
+                        aria-live="polite"
+                    ></p>
+
+                </fieldset>
+
+                <p
+                    id="search-error"
+                    class="form-error"
+                    aria-live="polite"
+                ></p>
+
+                <div class="search-actions">
+
+                    <button
+                        type="submit"
+                        class="search-send-button"
+                    >
+                        Send
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancel-search"
+                        class="search-cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+                <div
+                    id="plant-search-results"
+                    class="plant-search-results"
+                    aria-live="polite"
+                ></div>
+
+            </form>
+        </dialog>
 
         <section class="featured-content">
             <picture>
@@ -102,6 +224,7 @@
                     width="300"
                     height="180"
                 >
+            </picture>
 
         </section>
 

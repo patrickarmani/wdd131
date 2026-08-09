@@ -1,11 +1,134 @@
 [
     {
+        "id": 1,
+        "name": "Aloe Vera",
+        "scientificName": "Aloe barbadensis miller",
+        "uses": [
+            "Minor burns",
+            "Skin irritation",
+            "Minor wounds",
+            "Healing agents",
+            "Anti-dandruff"
+        ],
+        "countries": {
+            "North America": [
+                "Mexico",
+                "United States"
+            ],
+            "South America": [
+                "Brazil",
+                "Argentina"
+            ],
+            "Africa": [
+                "Tanzania",
+                "South Africa"
+            ]
+        },
+        "essentialOil": false
+    },
+
+    {
+        "id": 2,
+        "name": "Chamomile",
+        "scientificName": "Matricaria chamomilla",
+        "uses": [
+            "Digestive discomfort",
+            "Relaxation",
+            "Sleep support"
+        ],
+        "countries": {
+            "Europe": [
+                "Germany",
+                "Hungary"
+            ],
+            "North America": [
+                "United States",
+                "Canada"
+            ],
+            "South America": [
+                "Argentina",
+                "Brazil"
+            ],
+            "Africa": [
+                "Egypt",
+                "Morocco"
+            ]
+        },
+        "essentialOil": true
+    },
+
+    {
+        "id": 3,
+        "name": "Mint",
+        "scientificName": "Mentha × piperita",
+        "uses": [
+            "Digestive discomfort",
+            "Nausea",
+            "Headache"
+        ],
+        "countries": {
+            "Europe": [
+                "Germany",
+                "United Kingdom"
+            ],
+            "North America": [
+                "United States",
+                "Canada"
+            ],
+            "South America": [
+                "Argentina",
+                "Brazil"
+            ],
+            "Asia": [
+                "India",
+                "China"
+            ],
+            "Africa": [
+                "Egypt",
+                "Morocco"
+            ]
+        },
+        "essentialOil": true
+    },
+
+    {
+        "id": 4,
+        "name": "Lavender",
+        "scientificName": "Lavandula angustifolia",
+        "uses": [
+            "Relaxation",
+            "Sleep support",
+            "Mild anxiety symptoms"
+        ],
+        "countries": {
+            "Europe": [
+                "France",
+                "Spain"
+            ],
+            "North America": [
+                "United States",
+                "Canada"
+            ],
+            "South America": [
+                "Argentina",
+                "Brazil"
+            ],
+            "Africa": [
+                "South Africa",
+                "Morocco"
+            ],
+            "Oceania": [
+                "Australia",
+                "New Zealand"
+            ]
+        },
+        "essentialOil": true
+    },
+
+    {
         "id": 5,
         "name": "Rosemary",
         "scientificName": "Salvia rosmarinus",
-        "origin": "Mediterranean region",
-        "image": "images/plants/rosemary.webp",
-        "alt": "Green rosemary plant",
         "uses": [
             "Digestive discomfort",
             "Traditional pain relief",
@@ -34,8 +157,10 @@
             "Africa": [
                 "Tunisia"
             ]
-        }
+        },
+        "essentialOil": true
     },
+
     {
         "id": 6,
         "name": "Ginger",
@@ -69,8 +194,10 @@
                 "Nigeria",
                 "Ghana"
             ]
-        }
+        },
+        "essentialOil": true
     },
+
     {
         "id": 7,
         "name": "Eucalyptus",
@@ -104,8 +231,10 @@
                 "Ethiopia",
                 "South Africa"
             ]
-        }
+        },
+        "essentialOil": true
     },
+
     {
         "id": 8,
         "name": "Lemon",
@@ -142,8 +271,10 @@
             "Oceania": [
                 "Australia"
             ]
-        }
+        },
+        "essentialOil": true
     },
+
     {
         "id": 9,
         "name": "Asthma Plant",
@@ -178,8 +309,10 @@
                 "South Africa",
                 "Namibia"
             ]
-        }
+        },
+        "essentialOil": false
     },
+
     {
         "id": 10,
         "name": "Passion Flower",
@@ -218,6 +351,7 @@
                 "Australia",
                 "New Zealand"
             ]
-        }
+        },
+        "essentialOil": false
     }
 ]

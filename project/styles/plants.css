@@ -233,6 +233,36 @@
         font-family: var(--secondary-font);
         line-height: 1.8;
     }
+
+
+/* ---------------------- countries on card back ---------------------- */
+
+    .countries-section {
+        margin-top: 1.5rem;
+    }
+
+    .countries-section h4 {
+        margin-bottom: 0.75rem;
+
+        color: var(--light-color);
+        font-family: var(--secondary-font);
+        font-size: 1rem;
+    }
+
+    .countries-list {
+        font-family: var(--secondary-font);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .continent-group {
+        margin-bottom: 0.5rem;
+    }
+
+    .continent-group strong {
+        color: var(--secondary-color);
+    }
+
 /*--------------------------button styling-------------------------*/
     .flip-button,
     .close-card {
