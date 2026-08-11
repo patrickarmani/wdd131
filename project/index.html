@@ -214,11 +214,14 @@
         </dialog>
 
         <section class="featured-content">
-            <picture>
+
+            <!-- Mobile image -->
+            <picture class="featured-mobile">
                 <source
                     media="(min-width: 768px)"
                     srcset="images/central-image.webp"
                 >
+
                 <img
                     src="images/central-image.webp"
                     alt="A variety of medicinal plants in a garden"
@@ -226,6 +229,117 @@
                     height="180"
                 >
             </picture>
+
+
+            <!-- Desktop featured plants -->
+            <div class="featured-desktop">
+
+                <h2>Medicinal Plants</h2>
+
+                <div class="featured-plants-grid">
+
+                    <a
+                        href="plants.html"
+                        class="featured-plant-card"
+                    >
+                        <div class="featured-plant-image">
+                            <img
+                                src="images/plants/aloe-vera.webp"
+                                alt="Aloe vera plant"
+                                loading="lazy"
+                                width="250"
+                                height="180"
+                            >
+
+                            <span
+                                class="featured-heart"
+                                aria-hidden="true"
+                            >
+                                ♡
+                            </span>
+                        </div>
+
+                        <h3>Aloe Vera</h3>
+                    </a>
+
+
+                    <a
+                        href="plants.html"
+                        class="featured-plant-card"
+                    >
+                        <div class="featured-plant-image">
+                            <img
+                                src="images/plants/chamomile.webp"
+                                alt="Chamomile flowers"
+                                loading="lazy"
+                                width="250"
+                                height="180"
+                            >
+
+                            <span
+                                class="featured-heart"
+                                aria-hidden="true"
+                            >
+                                ♡
+                            </span>
+                        </div>
+
+                        <h3>Chamomile</h3>
+                    </a>
+
+
+                    <a
+                        href="plants.html"
+                        class="featured-plant-card"
+                    >
+                        <div class="featured-plant-image">
+                            <img
+                                src="images/plants/mint.webp"
+                                alt="Fresh mint leaves"
+                                loading="lazy"
+                                width="250"
+                                height="180"
+                            >
+
+                            <span
+                                class="featured-heart"
+                                aria-hidden="true"
+                            >
+                                ♡
+                            </span>
+                        </div>
+
+                        <h3>Mint</h3>
+                    </a>
+
+
+                    <a
+                        href="plants.html"
+                        class="featured-plant-card"
+                    >
+                        <div class="featured-plant-image">
+                            <img
+                                src="images/plants/lavender.webp"
+                                alt="Lavender flowers"
+                                loading="lazy"
+                                width="250"
+                                height="180"
+                            >
+
+                            <span
+                                class="featured-heart"
+                                aria-hidden="true"
+                            >
+                                ♡
+                            </span>
+                        </div>
+
+                        <h3>Lavender</h3>
+                    </a>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -236,6 +350,7 @@
                     Our goal is to educate and inspire individuals to explore the natural remedies that plants offer.
                 </span>
             </button>
+
         </section>
 
     </main>

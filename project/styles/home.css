@@ -104,6 +104,12 @@
     height: auto;
 }
 
+/* Desktop featured cards are hidden on mobile */
+
+.featured-desktop {
+    display: none;
+}
+
 .info-btn {
     display: flex;
     align-items: center;
@@ -328,4 +334,296 @@
     font-size: 1.5rem;
 
     cursor: pointer;
+}
+
+
+
+/* ==================================================
+   DESKTOP HOME
+================================================== */
+
+@media screen and (min-width: 900px) {
+
+    /* ----------------------------------
+       MAIN DESKTOP STRUCTURE
+    ---------------------------------- */
+
+    main {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 38.2%)
+            minmax(0, 61.8%);
+
+        max-width: 1280px;
+
+        margin: 0 auto;
+    }
+
+
+    /* ----------------------------------
+       HERO IMAGE - RIGHT SIDE
+    ---------------------------------- */
+
+    .hero-image {
+        grid-column: 2;
+        grid-row: 1;
+
+        height: 360px;
+
+        overflow: hidden;
+    }
+
+    .hero-image picture {
+        display: block;
+
+        width: 140%;
+        height: auto;
+    }
+
+    .hero-image img {
+        width: 140%;
+        height: auto;
+
+        margin: 0;
+
+        object-fit: cover;
+    }
+
+
+    /* ----------------------------------
+       HERO TEXT - LEFT SIDE
+    ---------------------------------- */
+
+ .hero-content {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 0;
+
+    padding: 2.5rem 3rem 2.5rem 0;
+
+    text-align: left;
+}
+
+    .hero-content h1 {
+        max-width: 430px;
+
+        margin: 0;
+
+        font-size: 2.6rem;
+        line-height: 1.1;
+    }
+
+    .hero-content p {
+        max-width: 430px;
+
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+
+    /* ----------------------------------
+       DIVIDER
+    ---------------------------------- */
+
+    .title-divider {
+        justify-content: flex-start;
+
+        width: 100%;
+
+        margin: 1rem 0 1.25rem;
+    }
+
+    .title-divider::before,
+    .title-divider::after {
+        width: 60px;
+    }
+
+/* ----------------------------------
+   EXPLORE BUTTON
+---------------------------------- */
+
+    .hero-button {
+        width: 440px;
+
+        margin: 1.5rem 0 0;
+    }
+
+/* ----------------------------------
+   FEATURED PLANTS
+---------------------------------- */
+.featured-content {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 2rem 0 0;
+
+    padding: 0;
+}
+
+/* Hide the original mobile image on desktop */
+
+.featured-mobile {
+    display: none;
+}
+
+
+/* Show desktop content */
+
+.featured-desktop {
+    display: block;
+    width: 100%;
+}
+
+
+/* Section title */
+
+.featured-desktop h2 {
+    margin: 0 0 1.25rem;
+
+    color: var(--primary-color);
+
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/* Four plant cards */
+
+.featured-plants-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 1.5rem;
+
+    width: 100%;
+}
+
+
+/* Individual card */
+
+.featured-plant-card {
+    display: block;
+
+    overflow: hidden;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+
+    background-color: var(--secondary-color);
+
+    color: var(--primary-color);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.featured-plant-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* Plant image */
+
+.featured-plant-image {
+    position: relative;
+
+    width: 100%;
+    height: 175px;
+
+    overflow: hidden;
+}
+
+
+.featured-plant-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Heart */
+
+.featured-heart {
+    position: absolute;
+
+    top: 0.7rem;
+    right: 0.8rem;
+
+    color: var(--light-color);
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    text-shadow:
+        0 1px 4px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* Plant name */
+
+.featured-plant-card h3 {
+    margin: 0;
+
+    padding: 0.9rem;
+    
+    color: var(--primary-color);
+
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+
+    text-align: center;
+}
+
+
+    /* ----------------------------------
+       INFORMATION
+    ---------------------------------- */
+
+ .info-section {
+    grid-column: 1 / -1;
+    grid-row: 3;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 1.25rem 0 2rem;
+
+    padding: 0;
+}
+
+.info-btn {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 1rem 1.25rem;
+}
+
 }

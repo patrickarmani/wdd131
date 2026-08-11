@@ -175,3 +175,82 @@ footer p {
     color: var(--primary-color);
     font-size: 1rem;
 }
+
+
+/* ==================================================
+   DESKTOP
+================================================== */
+
+@media screen and (min-width: 900px) {
+
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+}
+    .header {
+        padding: 0.75rem 4rem;
+    }
+
+    .brand img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .brand span {
+        margin-left: -1rem;
+
+        font-size: 1.1rem;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+
+        position: static;
+
+        width: auto;
+    }
+
+    .navigation ul {
+        display: flex;
+        align-items: center;
+
+        gap: 1rem;
+    }
+
+    .navigation a {
+        width: auto;
+
+        margin: 0;
+
+        padding: 0.75rem 1.5rem;
+
+        border: 1px solid var(--secondary-color);
+
+        border-radius: 4px;
+
+        box-shadow: none;
+    }
+
+    footer {
+        margin-top: 1.5rem;
+
+        padding: 2rem 1rem;
+
+        background-color: var(--light-color);
+
+        color: var(--primary-color);
+    }
+
+    footer p {
+        color: var(--primary-color);
+    }
+}
