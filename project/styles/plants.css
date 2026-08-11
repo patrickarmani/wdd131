@@ -39,7 +39,7 @@
     object-fit: cover;
 }
 
-.plant-card h3 {
+.plant-card h2 {
     margin: 0;
     padding: 0.6rem 0.3rem;
 
@@ -213,7 +213,7 @@
         display: block;
     }
 
-.card-back h3 {
+.card-back h2 {
     margin-top: 0;
 
     font-family: var(--tertiary-font);
@@ -289,7 +289,7 @@
         height: 110px;
     }
 
-    .plant-card h3 {
+    .plant-card h2 {
         font-size: 1rem;
     }
 }
