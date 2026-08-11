@@ -136,6 +136,11 @@
 
 }
 
+/* Favorite plant selected */
+.favorite.is-favorite {
+    color: var(--primary-color);
+}
+
 
     .plant-card {
         position: relative;

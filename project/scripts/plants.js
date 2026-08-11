@@ -1,6 +1,66 @@
 const plantsGrid = document.querySelector("#plants-grid");
 const loadMoreButton = document.querySelector("#load-more-button");
 
+const FAVORITES_KEY = "doctorNatureFavorites";
+
+function getFavorites() {
+    const savedFavorites =
+        localStorage.getItem(FAVORITES_KEY);
+
+    return savedFavorites
+        ? JSON.parse(savedFavorites)
+        : [];
+}
+
+function saveFavorites(favorites) {
+    localStorage.setItem(
+        FAVORITES_KEY,
+        JSON.stringify(favorites)
+    );
+}
+
+function updateFavoriteButton(button, plantId) {
+    const favorites = getFavorites();
+
+    const isFavorite =
+        favorites.includes(String(plantId));
+
+    button.textContent =
+        isFavorite ? "♥" : "♡";
+    button.classList.toggle("is-favorite", isFavorite);
+
+    button.setAttribute(
+        "aria-label",
+        isFavorite
+            ? "Remove plant from favorites"
+            : "Add plant to favorites"
+    );
+}
+
+function toggleFavorite(button, plantId) {
+    let favorites = getFavorites();
+
+    const id = String(plantId);
+
+    if (favorites.includes(id)) {
+        favorites =
+            favorites.filter(
+                (favoriteId) =>
+                    favoriteId !== id
+            );
+    } else {
+        favorites.push(id);
+    }
+
+    saveFavorites(favorites);
+
+    updateFavoriteButton(
+        button,
+        plantId
+    );
+}
+
+
 const cardsPerClick = 2;
 
 let plants = [];
@@ -9,21 +69,35 @@ let initialCardsRevealed = false;
 
 
 function createPlantCard(plant) {
-    const article = document.createElement("article");
+
+    const article =
+        document.createElement("article");
 
     article.classList.add("plant-card");
 
-    article.dataset.scientific = plant.scientificName;
-    article.dataset.origin = plant.origin;
-    article.dataset.uses = plant.uses.join(",");
-    article.dataset.countries = JSON.stringify(plant.countries);
-    article.dataset.id = plant.id;
+    article.dataset.scientific =
+        plant.scientificName;
+
+    article.dataset.origin =
+        plant.origin;
+
+    article.dataset.uses =
+        plant.uses.join(",");
+
+    article.dataset.countries =
+        JSON.stringify(plant.countries);
+
+    article.dataset.id =
+        plant.id;
+
 
     article.innerHTML = `
         <div class="card-inner">
 
             <div class="card-front">
+
                 <div class="plant-image">
+
                     <img
                         src="${plant.image}"
                         alt="${plant.alt}"
@@ -37,11 +111,13 @@ function createPlantCard(plant) {
                     >
                         ♡
                     </button>
+
                 </div>
 
-                <h3>${plant.name}</h3>
+                <h2>${plant.name}</h2>
 
                 <div class="plant-details">
+
                     <p>
                         <strong>Scientific name:</strong>
                         <span class="scientific-name"></span>
@@ -52,35 +128,55 @@ function createPlantCard(plant) {
                         <span class="plant-origin"></span>
                     </p>
 
-                    <button class="flip-button" type="button">
+                    <button
+                        class="flip-button"
+                        type="button"
+                    >
                         Flip card ↻
                     </button>
 
-                    <button class="close-card" type="button">
+                    <button
+                        class="close-card"
+                        type="button"
+                    >
                         Close
                     </button>
+
                 </div>
+
             </div>
 
-            <div class="card-back">
-                <h3>${plant.name}</h3>
 
-                <h4>Traditional medicinal uses</h4>
+            <div class="card-back">
+
+                <h2>${plant.name}</h2>
+
+                <h3>Traditional medicinal uses</h3>
 
                 <ul class="uses-list"></ul>
 
                 <div class="countries-section">
-                    <h4>Countries where this plant is found or cultivated</h4>
+
+                    <h4>
+                        Countries where this plant is found or cultivated
+                    </h4>
+
                     <div class="countries-list"></div>
+
                 </div>
 
-                <button class="flip-button" type="button">
+                <button
+                    class="flip-button"
+                    type="button"
+                >
                     ↶ Back
                 </button>
+
             </div>
 
         </div>
     `;
+
 
     setupPlantCard(article);
 
@@ -89,10 +185,16 @@ function createPlantCard(plant) {
 
 
 function revealInitialCards() {
-    const hiddenCards = document.querySelectorAll(".initially-hidden");
+
+    const hiddenCards =
+        document.querySelectorAll(
+            ".initially-hidden"
+        );
 
     hiddenCards.forEach((card) => {
-        card.classList.remove("initially-hidden");
+        card.classList.remove(
+            "initially-hidden"
+        );
     });
 
     initialCardsRevealed = true;
@@ -106,111 +208,229 @@ function displayMorePlants() {
         return;
     }
 
-    const nextPlants = plants.slice(
-        nextPlantIndex,
-        nextPlantIndex + cardsPerClick
-    );
+
+    const nextPlants =
+        plants.slice(
+            nextPlantIndex,
+            nextPlantIndex + cardsPerClick
+        );
+
 
     nextPlants.forEach((plant) => {
-        const card = createPlantCard(plant);
+
+        const card =
+            createPlantCard(plant);
 
         plantsGrid.appendChild(card);
     });
 
-    nextPlantIndex += nextPlants.length;
 
-    if (nextPlantIndex >= plants.length) {
+    nextPlantIndex +=
+        nextPlants.length;
+
+
+    if (
+        nextPlantIndex >=
+        plants.length
+    ) {
         loadMoreButton.hidden = true;
     }
 }
 
 
 async function loadPlantsData() {
+
     try {
-        const response = await fetch("data/plants.json");
+
+        const response =
+            await fetch(
+                "data/plants.json"
+            );
 
         if (!response.ok) {
-            throw new Error("Could not load plants data.");
+            throw new Error(
+                "Could not load plants data."
+            );
         }
 
-        plants = await response.json();
-        await openRequestedPlant(); //Added to ensure it runs after plants.json finishes loading.
+        plants =
+            await response.json();
+
+        await openRequestedPlant();
 
     } catch (error) {
-        console.error("Error loading plants:", error);
+
+        console.error(
+            "Error loading plants:",
+            error
+        );
     }
 }
 
 
-loadMoreButton.addEventListener("click", displayMorePlants);
+loadMoreButton.addEventListener(
+    "click",
+    displayMorePlants
+);
 
 loadPlantsData();
-//------------------open the card and show the details-----------------------
+
+
+/* --------------------------------------------------
+   SETUP PLANT CARD
+-------------------------------------------------- */
 
 function setupPlantCard(card) {
-    card.addEventListener("click", (event) => {
 
-        if (event.target.closest(".favorite")) {
-            return;
+    const favoriteButton =
+        card.querySelector(
+            ".favorite"
+        );
+
+
+    if (favoriteButton) {
+
+        updateFavoriteButton(
+            favoriteButton,
+            card.dataset.id
+        );
+
+
+        favoriteButton.addEventListener(
+            "click",
+            (event) => {
+
+                event.stopPropagation();
+
+                toggleFavorite(
+                    favoriteButton,
+                    card.dataset.id
+                );
+            }
+        );
+    }
+
+
+    card.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                event.target.closest(
+                    ".favorite"
+                )
+            ) {
+                return;
+            }
+
+
+            if (
+                card.classList.contains(
+                    "expanded"
+                )
+            ) {
+                return;
+            }
+
+
+            document
+                .querySelectorAll(
+                    ".plant-card.expanded"
+                )
+                .forEach(
+                    (otherCard) => {
+
+                        otherCard
+                            .classList
+                            .remove(
+                                "expanded"
+                            );
+
+                        otherCard
+                            .classList
+                            .remove(
+                                "flipped"
+                            );
+                    }
+                );
+
+
+            card.classList.add(
+                "expanded"
+            );
+
+            showPlantDetails(card);
         }
-
-        if (card.classList.contains("expanded")) {
-            return;
-        }
-
-        document.querySelectorAll(".plant-card.expanded")
-            .forEach((otherCard) => {
-                otherCard.classList.remove("expanded");
-                otherCard.classList.remove("flipped");
-            });
-
-        card.classList.add("expanded");
-
-        showPlantDetails(card);
-    });
+    );
 }
 
-//When clicking the heart icon, the card should not open.
+
+/* --------------------------------------------------
+   SHOW PLANT DETAILS
+-------------------------------------------------- */
 
 function showPlantDetails(card) {
 
     const scientificName =
-        card.dataset.scientific || "Not available";
+        card.dataset.scientific ||
+        "Not available";
+
 
     const origin =
-        card.dataset.origin || "Not available";
+        card.dataset.origin ||
+        "Not available";
+
 
     const uses =
         card.dataset.uses
-            ? card.dataset.uses.split(",")
+            ? card.dataset.uses
+                .split(",")
             : [];
+
 
     const countries =
         card.dataset.countries
-            ? JSON.parse(card.dataset.countries)
+            ? JSON.parse(
+                card.dataset.countries
+            )
             : {};
 
 
     const scientificElement =
-        card.querySelector(".scientific-name");
+        card.querySelector(
+            ".scientific-name"
+        );
+
 
     const originElement =
-        card.querySelector(".plant-origin");
+        card.querySelector(
+            ".plant-origin"
+        );
+
 
     const usesList =
-        card.querySelector(".uses-list");
+        card.querySelector(
+            ".uses-list"
+        );
+
 
     const countriesElement =
-        card.querySelector(".countries-list");
+        card.querySelector(
+            ".countries-list"
+        );
 
 
     if (scientificElement) {
-        scientificElement.textContent = scientificName;
+
+        scientificElement.textContent =
+            scientificName;
     }
 
 
     if (originElement) {
-        originElement.textContent = origin;
+
+        originElement.textContent =
+            origin;
     }
 
 
@@ -218,104 +438,186 @@ function showPlantDetails(card) {
 
         usesList.innerHTML = "";
 
+
         uses.forEach((use) => {
 
             const listItem =
-                document.createElement("li");
+                document.createElement(
+                    "li"
+                );
 
             listItem.textContent =
                 use.trim();
 
-            usesList.appendChild(listItem);
-
+            usesList.appendChild(
+                listItem
+            );
         });
     }
 
 
     if (countriesElement) {
 
-        countriesElement.innerHTML = "";
-
-        Object.entries(countries).forEach(
-            ([continent, countryList]) => {
-
-                const continentBlock =
-                    document.createElement("div");
-
-                continentBlock.classList.add(
-                    "continent-group"
-                );
+        countriesElement.innerHTML =
+            "";
 
 
-                const continentTitle =
-                    document.createElement("strong");
+        Object.entries(countries)
+            .forEach(
+                (
+                    [
+                        continent,
+                        countryList
+                    ]
+                ) => {
 
-                continentTitle.textContent =
-                    `${continent}: `;
+                    const continentBlock =
+                        document
+                            .createElement(
+                                "div"
+                            );
 
-
-                const countriesText =
-                    document.createElement("span");
-
-                countriesText.textContent =
-                    countryList.join(", ");
-
-
-                continentBlock.appendChild(
-                    continentTitle
-                );
-
-                continentBlock.appendChild(
-                    countriesText
-                );
-
-                countriesElement.appendChild(
                     continentBlock
-                );
+                        .classList
+                        .add(
+                            "continent-group"
+                        );
 
-            }
-        );
+
+                    const continentTitle =
+                        document
+                            .createElement(
+                                "strong"
+                            );
+
+                    continentTitle
+                        .textContent =
+                            `${continent}: `;
+
+
+                    const countriesText =
+                        document
+                            .createElement(
+                                "span"
+                            );
+
+                    countriesText
+                        .textContent =
+                            countryList
+                                .join(", ");
+
+
+                    continentBlock
+                        .appendChild(
+                            continentTitle
+                        );
+
+                    continentBlock
+                        .appendChild(
+                            countriesText
+                        );
+
+                    countriesElement
+                        .appendChild(
+                            continentBlock
+                        );
+                }
+            );
     }
 }
 
-//------------------flip the card and show the back side-----------------------
-document.addEventListener("click", (event) => {
 
-    if (event.target.classList.contains("flip-button")) {
-        event.stopPropagation();
+/* --------------------------------------------------
+   FLIP CARD
+-------------------------------------------------- */
 
-        const card = event.target.closest(".plant-card");
+document.addEventListener(
+    "click",
+    (event) => {
 
-        card.classList.toggle("flipped");
+        if (
+            event.target
+                .classList
+                .contains(
+                    "flip-button"
+                )
+        ) {
+
+            event.stopPropagation();
+
+            const card =
+                event.target.closest(
+                    ".plant-card"
+                );
+
+            card.classList.toggle(
+                "flipped"
+            );
+        }
     }
+);
 
-});
 
-//------------------close the card and hide the details-----------------------
-document.addEventListener("click", (event) => {
+/* --------------------------------------------------
+   CLOSE CARD
+-------------------------------------------------- */
 
-    if (event.target.classList.contains("close-card")) {
-        event.stopPropagation();
+document.addEventListener(
+    "click",
+    (event) => {
 
-        const card = event.target.closest(".plant-card");
+        if (
+            event.target
+                .classList
+                .contains(
+                    "close-card"
+                )
+        ) {
 
-        card.classList.remove("expanded");
-        card.classList.remove("flipped");
+            event.stopPropagation();
+
+            const card =
+                event.target.closest(
+                    ".plant-card"
+                );
+
+            card.classList.remove(
+                "expanded"
+            );
+
+            card.classList.remove(
+                "flipped"
+            );
+        }
     }
+);
 
-});
-//------------------setup the card and show the details-----------------------
 
-document.querySelectorAll(".plant-card")
+/* --------------------------------------------------
+   SETUP CARDS ALREADY IN HTML
+-------------------------------------------------- */
+
+document
+    .querySelectorAll(
+        ".plant-card"
+    )
     .forEach((card) => {
+
         setupPlantCard(card);
     });
 
-//-----------------search----------------------------------
+
+/* --------------------------------------------------
+   OPEN REQUESTED PLANT FROM SEARCH
+-------------------------------------------------- */
+
 async function openRequestedPlant() {
 
     const params =
-        new URLSearchParams(window.location.search);
+        new URLSearchParams(
+            window.location.search
+        );
+
 
     const requestedPlantId =
         params.get("plant");
@@ -338,11 +640,16 @@ async function openRequestedPlant() {
 
     if (card) {
 
-        card.classList.remove("initially-hidden");
+        card.classList.remove(
+            "initially-hidden"
+        );
 
-        card.classList.add("expanded");
+        card.classList.add(
+            "expanded"
+        );
 
         showPlantDetails(card);
+
 
         card.scrollIntoView({
             behavior: "smooth",
@@ -360,7 +667,8 @@ async function openRequestedPlant() {
     const requestedPlant =
         plants.find(
             (plant) =>
-                String(plant.id) === requestedPlantId
+                String(plant.id) ===
+                requestedPlantId
         );
 
 
@@ -369,17 +677,23 @@ async function openRequestedPlant() {
     }
 
 
-    card = createPlantCard(requestedPlant);
+    card =
+        createPlantCard(
+            requestedPlant
+        );
+
 
     plantsGrid.prepend(card);
 
-    card.classList.add("expanded");
+    card.classList.add(
+        "expanded"
+    );
 
     showPlantDetails(card);
+
 
     card.scrollIntoView({
         behavior: "smooth",
         block: "center"
     });
-
 }
