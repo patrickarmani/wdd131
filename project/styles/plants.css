@@ -4,7 +4,7 @@
     padding: 1rem;
 }
 
-.plants-section h2 {
+.plants-section h1 {
     margin: 0 0 1.5rem;
     text-align: left;
     color: var(--primary-color);
@@ -221,6 +221,11 @@
     text-align: center;
 }
 
+/* Traditional medicinal uses */
+.card-back h3 {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+}
 /*----------------------stylization of the verse----------------------------*/
     .card-back h4 {
         font-family: var(--secondary-font);
