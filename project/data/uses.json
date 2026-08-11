@@ -1,0 +1,218 @@
+[
+    {
+        "id": 1,
+        "name": "Aloe Vera",
+        "scientificName": "Aloe barbadensis miller",
+        "image": "images/plants/aloe-vera.webp",
+        "alt": "Green Aloe vera plant",
+        "methods": [
+            {
+                "title": "Skin application",
+                "description": "The clear inner gel is commonly applied directly to clean skin as a moisturizing and soothing topical preparation."
+            },
+            {
+                "title": "Minor burns and sunburn",
+                "description": "A small amount of clear aloe vera gel may be gently applied to minor superficial burns or sun-exposed skin."
+            },
+            {
+                "title": "Hair care",
+                "description": "Aloe vera gel is commonly used as an ingredient in shampoos, conditioners, and moisturizing hair masks."
+            }
+        ],
+        "warning": "For external use, prefer the clear inner gel. Avoid the yellow latex found beneath the leaf skin. Serious burns, deep wounds, or infected skin require professional medical care."
+    },
+    {
+        "id": 2,
+        "name": "Chamomile",
+        "scientificName": "Matricaria chamomilla",
+        "image": "images/plants/chamomile.webp",
+        "alt": "White chamomile flowers",
+        "methods": [
+            {
+                "title": "Herbal infusion",
+                "description": "Dried chamomile flowers are traditionally steeped in hot water to prepare an herbal infusion."
+            },
+            {
+                "title": "Compress",
+                "description": "A cooled chamomile infusion may traditionally be used to prepare a gentle external compress."
+            },
+            {
+                "title": "Topical products",
+                "description": "Chamomile is commonly included in creams, lotions, shampoos, and other cosmetic preparations."
+            }
+        ],
+        "warning": "People who are allergic to plants in the daisy family may also react to chamomile."
+    },
+    {
+        "id": 3,
+        "name": "Mint",
+        "scientificName": "Mentha × piperita",
+        "image": "images/plants/mint.webp",
+        "alt": "Fresh green mint leaves",
+        "methods": [
+            {
+                "title": "Herbal infusion",
+                "description": "Fresh or dried mint leaves are commonly steeped in hot water to prepare an herbal infusion."
+            },
+            {
+                "title": "Culinary use",
+                "description": "Fresh mint leaves are widely used in foods, drinks, sauces, and desserts."
+            },
+            {
+                "title": "Commercial preparations",
+                "description": "Mint is also found in teas, lozenges, topical products, and other commercially prepared products."
+            }
+        ],
+        "warning": "Concentrated peppermint oil is much stronger than ordinary mint leaves and should not be used in the same way. Avoid applying concentrated essential oil directly to the skin."
+    },
+    {
+        "id": 4,
+        "name": "Lavender",
+        "scientificName": "Lavandula angustifolia",
+        "image": "images/plants/lavender.webp",
+        "alt": "Purple lavender flowers",
+        "methods": [
+            {
+                "title": "Herbal infusion",
+                "description": "Dried lavender flowers may be steeped in hot water to prepare a traditional herbal infusion."
+            },
+            {
+                "title": "Aromatic use",
+                "description": "Lavender is commonly used in aromatic preparations intended to promote a relaxing environment."
+            },
+            {
+                "title": "Bath and topical products",
+                "description": "Lavender is frequently included in bath products, creams, lotions, and other cosmetic preparations."
+            }
+        ],
+        "warning": "Lavender essential oil is concentrated and should not be confused with ordinary lavender flowers. Skin irritation or allergic reactions may occur in some people."
+    },
+    {
+        "id": 5,
+        "name": "Rosemary",
+        "scientificName": "Salvia rosmarinus",
+        "image": "images/plants/rosemary.webp",
+        "alt": "Green rosemary plant",
+        "methods": [
+            {
+                "title": "Herbal infusion",
+                "description": "Rosemary leaves are traditionally steeped in hot water to prepare an aromatic herbal infusion."
+            },
+            {
+                "title": "Culinary use",
+                "description": "Fresh or dried rosemary leaves are commonly used as an aromatic herb in foods and seasonings."
+            },
+            {
+                "title": "Hair care",
+                "description": "Rosemary is commonly included in shampoos, rinses, and other traditional hair-care preparations."
+            },
+            {
+                "title": "Topical preparations",
+                "description": "Rosemary extracts may be found in creams, lotions, massage products, and other preparations intended for external use."
+            }
+        ],
+        "warning": "Rosemary used as a culinary herb is different from concentrated rosemary extracts or essential oil. Essential oil should not be swallowed or applied undiluted to the skin."
+    },
+    {
+        "id": 6,
+        "name": "Ginger",
+        "scientificName": "Zingiber officinale",
+        "image": "images/plants/ginger.webp",
+        "alt": "Fresh ginger root",
+        "methods": [
+            {
+                "title": "Herbal infusion",
+                "description": "Fresh or dried ginger may be steeped in hot water to prepare an herbal infusion."
+            },
+            {
+                "title": "Culinary use",
+                "description": "Fresh, dried, or powdered ginger is widely used as a spice and ingredient in foods and beverages."
+            },
+            {
+                "title": "Commercial preparations",
+                "description": "Ginger is also available in commercially prepared products such as teas, candies, capsules, and extracts."
+            }
+        ],
+        "warning": "Food amounts of ginger are generally well tolerated, but concentrated preparations may cause digestive discomfort and may interact with some medicines."
+    },
+    {
+        "id": 7,
+        "name": "Eucalyptus",
+        "scientificName": "Eucalyptus globulus",
+        "image": "images/plants/eucalyptus.webp",
+        "alt": "Green eucalyptus leaves",
+        "methods": [
+            {
+                "title": "Aromatic preparations",
+                "description": "Eucalyptus is traditionally used in aromatic preparations intended to provide a refreshing sensation during periods of nasal or respiratory discomfort."
+            },
+            {
+                "title": "Topical products",
+                "description": "Eucalyptus extracts or diluted eucalyptus oil may be found in commercially prepared balms, creams, and chest rubs."
+            },
+            {
+                "title": "Commercial respiratory products",
+                "description": "Eucalyptus is commonly included in products such as lozenges, vapor rubs, and other preparations marketed for respiratory comfort."
+            }
+        ],
+        "warning": "Eucalyptus essential oil is highly concentrated and can be toxic if swallowed. It should not be applied undiluted to the skin. Extra caution is required around children."
+    },
+    {
+        "id": 8,
+        "name": "Lemon",
+        "scientificName": "Citrus limon",
+        "image": "images/plants/lemon.webp",
+        "alt": "Fresh lemon fruit",
+        "methods": [
+            {
+                "title": "Food and beverages",
+                "description": "Fresh lemon juice and fruit are widely used in foods, drinks, and culinary preparations."
+            },
+            {
+                "title": "Warm beverages",
+                "description": "Lemon juice is commonly added to warm water or herbal infusions as a traditional beverage."
+            },
+            {
+                "title": "Culinary peel",
+                "description": "Lemon zest may be used in foods and beverages to provide flavor and aroma."
+            }
+        ],
+        "warning": "Lemon juice is acidic and frequent direct contact may irritate sensitive skin or contribute to tooth enamel erosion. Citrus oils on the skin may increase sensitivity to sunlight."
+    },
+    {
+        "id": 9,
+        "name": "Asthma Plant",
+        "scientificName": "Euphorbia hirta",
+        "image": "images/plants/asthma-plant.webp",
+        "alt": "Fresh asthma plant leaves",
+        "methods": [
+            {
+                "title": "Traditional herbal preparations",
+                "description": "Euphorbia hirta has a history of traditional use in herbal preparations in several regions, particularly for respiratory and digestive complaints."
+            },
+            {
+                "title": "Research use",
+                "description": "Extracts of the plant have been investigated in laboratory and preclinical research for several biological activities, but these findings do not establish a safe home treatment for serious medical conditions."
+            }
+        ],
+        "warning": "Do not use this plant as a substitute for medical treatment of asthma, anaphylaxis, severe breathing problems, or snakebite. These conditions can be medical emergencies. Euphorbia species may also contain irritating plant sap."
+    },
+    {
+        "id": 10,
+        "name": "Passion Flower",
+        "scientificName": "Passiflora incarnata",
+        "image": "images/plants/passion-flower.webp",
+        "alt": "Passion flower with purple and white petals",
+        "methods": [
+            {
+                "title": "Herbal infusion",
+                "description": "Dried aerial parts of passion flower are traditionally steeped in hot water to prepare an herbal infusion."
+            },
+            {
+                "title": "Commercial preparations",
+                "description": "Passion flower is also available in commercially prepared herbal teas, extracts, and other standardized products."
+            }
+        ],
+        "warning": "Passion flower may cause drowsiness and may increase the effects of medicines or substances that cause sedation. People taking medications should seek professional advice before using medicinal preparations."
+    }
+]

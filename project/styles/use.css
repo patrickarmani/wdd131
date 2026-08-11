@@ -1,0 +1,558 @@
+/* =========================
+   USE PAGE
+========================= */
+:root {
+    --primary-color: #1E2B0E;
+    --secondary-color: #B8BA9F;
+    --tertiary-color: #74994B;
+    --quaternary-color: #A58F20;
+    --emphasis-color: #C75B00;
+    --light-color: #F8F5F0;
+
+    --primary-font: "Lora", Times, serif;
+    --secondary-font: "Lato", sans-serif;
+    --tertiary-font: "Playfair Display", serif;
+}
+
+.use-hero {
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+}
+
+
+.use-hero img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.use-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(30, 43, 14, 0.55);
+}
+
+
+.use-hero-content {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+
+    width: 90%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.use-hero-content h1 {
+    margin: 0 0 0.5rem;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 2.4rem;
+}
+
+
+.use-hero-content p {
+    max-width: 600px;
+
+    margin: auto;
+
+    font-family: "Lato", sans-serif;
+
+    line-height: 1.5;
+}
+
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+
+.use-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 2rem 1rem;
+}
+
+
+.use-introduction {
+    max-width: 700px;
+
+    margin: 0 auto 2rem;
+
+    text-align: center;
+}
+
+
+.use-introduction h2 {
+    margin-bottom: 0.5rem;
+
+    color: var(--primary-color);
+
+    font-family: var(--primary-font);
+}
+
+
+.use-introduction p {
+    line-height: 1.6;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.use-search {
+    max-width: 600px;
+
+    margin: 0 auto 2rem;
+}
+
+.use-search label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    color: var(--primary-color);
+
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+
+.use-search-box {
+    position: relative;
+}
+
+.use-search-box input {
+    width: 100%;
+
+    padding:
+        0.9rem
+        3rem
+        0.9rem
+        1rem;
+
+    border:
+        1px solid
+        var(--secondary-color);
+
+    border-radius: 6px;
+
+    background-color:
+        var(--light-color);
+
+    color:
+        var(--primary-color);
+
+    font-family:
+        var(--secondary-font);
+
+    font-size: 1rem;
+}
+
+.use-search-box input:focus {
+    outline:
+        2px solid
+        var(--tertiary-color);
+
+    outline-offset: 2px;
+}
+
+.search-icon {
+    position: absolute;
+
+    top: 50%;
+    right: 1rem;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        var(--primary-color);
+
+    font-size: 1.4rem;
+
+    pointer-events: none;
+}
+
+.no-use-results {
+    margin-top: 1rem;
+
+    color:
+        var(--emphasis-color);
+
+    font-family:
+        var(--secondary-font);
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+/* =========================
+   GRID
+========================= */
+
+
+.uses-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+}
+
+
+
+/* =========================
+   CARD
+========================= */
+
+
+.use-card {
+    overflow: hidden;
+
+    background: var(--light-color);
+
+    border: 1px solid #d4d4d4;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.use-card-image {
+    height: 220px;
+
+    overflow: hidden;
+}
+
+
+.use-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+.use-card:hover
+.use-card-image img {
+    transform: scale(1.03);
+}
+
+
+
+/* =========================
+   CARD SUMMARY
+========================= */
+
+
+.use-card-summary {
+    padding: 1.2rem;
+}
+
+
+.use-card-summary h3 {
+    margin: 0;
+
+    color: var(--primary-color);
+
+    font-family: var(--primary-font);
+
+    font-size: 1.5rem;
+}
+
+
+.scientific-name {
+    margin:
+        0.25rem
+        0
+        1rem;
+
+    color: #555;
+}
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+
+.use-toggle-button {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding:
+        0.8rem
+        1rem;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    font-family: var(--secondary-font);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.use-toggle-button:hover {
+    background: var(--tertiary-color);
+}
+
+
+.toggle-symbol {
+    font-size: 1.4rem;
+
+    font-weight: 400;
+}
+
+
+
+/* =========================
+   EXPANDED DETAILS
+========================= */
+
+
+.use-details {
+    padding:
+        0
+        1.2rem
+        1.3rem;
+}
+
+
+.use-details h4 {
+    margin:
+        0
+        0
+        0.8rem;
+
+    color: var(--primary-color);
+
+    font-family: var(--primary-font);
+
+    font-size: 1.1rem;
+}
+
+
+
+/* =========================
+   USE METHODS
+========================= */
+
+
+.use-method {
+    padding:
+        0.8rem
+        0;
+
+    border-bottom:
+        1px solid
+        #ddd;
+}
+
+
+.use-method:last-child {
+    border-bottom: none;
+}
+
+
+.use-method h5 {
+    margin:
+        0
+        0
+        0.3rem;
+
+    color: var(--emphasis-color);
+
+    font-family: var(--secondary-font);
+
+    font-size: 1rem;
+}
+
+
+.use-method p {
+    margin: 0;
+
+    line-height: 1.55;
+}
+
+
+
+/* =========================
+   SAFETY
+========================= */
+
+
+.use-warning {
+    margin-top: 1rem;
+
+    padding: 1rem;
+
+    background: #f4efd9;
+
+    border-left:
+        4px solid
+        var(--quaternary-color);
+
+    border-radius: 4px;
+}
+
+
+.use-warning strong {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    color: var(--primary-color);
+}
+
+
+.use-warning p {
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+
+.medical-disclaimer {
+    max-width: 900px;
+
+    margin:
+        0 auto
+        3rem;
+
+    padding: 1.5rem;
+
+    background: var(--secondary-color);
+
+    text-align: center;
+}
+
+
+.medical-disclaimer h2 {
+    margin-top: 0;
+
+    color: var(--primary-color);
+
+    font-family: var(--primary-font);
+}
+
+
+.medical-disclaimer p {
+    margin-bottom: 0;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================
+   ERROR
+========================= */
+
+
+.use-error {
+    margin-top: 2rem;
+
+    padding: 1rem;
+
+    color: #8b0000;
+
+    text-align: center;
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+
+
+@media screen and (min-width: 768px) {
+
+    .use-hero {
+        height: 350px;
+    }
+
+
+    .use-hero-content h1 {
+        font-size: 3rem;
+    }
+
+
+    .uses-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+
+@media screen and (min-width: 1100px) {
+
+    .use-section {
+        padding:
+            3rem
+            2rem;
+    }
+
+
+    .uses-grid {
+        gap: 2rem;
+    }
+
+}

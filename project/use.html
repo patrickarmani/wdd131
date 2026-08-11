@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Learn common and traditional ways medicinal plants are used, including preparation methods and safety information."
+    >
+
+    <title>Doctor Nature - Ways of Use</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/use.css">
+
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/use.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="index.html" class="brand">
+            <img
+                src="images/logo.webp"
+                alt="Doctor Nature logo"
+                width="300"
+                height="300"
+            >
+            <span>Doctor Nature</span>
+        </a>
+
+        <button
+            id="menu-button"
+            class="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation"
+        >
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+
+        <nav id="navigation" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plants.html">Plants</a></li>
+                <li><a href="use.html" class="active">Uses</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="use-hero">
+
+            <img
+                src="images/hero3.webp"
+                alt="Medicinal herbs and plants"
+                width="1200"
+                height="600"
+            >
+
+            <div class="use-hero-content">
+                <h1>Ways of Use</h1>
+
+                <p>
+                    Discover common ways medicinal plants are traditionally used.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="use-section">
+
+            <div class="use-introduction">
+
+                <h2>How are medicinal plants used?</h2>
+
+                <p>
+                    Explore the plants below to learn about common forms of
+                    preparation, traditional applications, and important
+                    safety information.
+                </p>
+
+            </div>
+            
+            <div class="use-search">
+
+                <label for="plant-use-search">
+                    Search for a plant
+                </label>
+
+                <div class="use-search-box">
+                    <input
+                        type="search"
+                        id="plant-use-search"
+                        name="plant-use-search"
+                        placeholder="Search by plant or scientific name..."
+                        autocomplete="off"
+                    >
+
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                </div>
+
+                <p
+                    id="no-use-results"
+                    class="no-use-results"
+                    hidden
+                >
+                    No plants found. Try another name.
+                </p>
+
+            </div>
+
+
+            <div
+                id="uses-grid"
+                class="uses-grid"
+                aria-live="polite"
+            >
+                <!-- Cards created by use.js -->
+            </div>
+
+
+            <p
+                id="use-error"
+                class="use-error"
+                hidden
+            >
+                The plant information could not be loaded.
+            </p>
+
+        </section>
+
+
+        <section class="medical-disclaimer">
+
+            <h2>Important Information</h2>
+
+            <p>
+                The information provided on Doctor Nature is for educational
+                purposes only and is not intended to replace professional
+                medical advice, diagnosis, or treatment.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Doctor Nature | Patrick Marcman
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
