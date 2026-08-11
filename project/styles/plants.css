@@ -417,7 +417,7 @@
        PLANT NAME
     ---------------------------------- */
 
-    .plant-card h3 {
+    .plant-card h2 {
         padding: 0.9rem 0.5rem;
 
         background-color: var(--secondary-color);
@@ -457,7 +457,7 @@
         padding: 2rem 2.5rem;
     }
 
-    .card-back h3 {
+    .card-back h2 {
         background-color: transparent;
 
         color: var(--light-color);
